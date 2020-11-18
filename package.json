@@ -1,0 +1,57 @@
+{
+  "name": "karoon",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --open",
+    "build": "env NODE_ENV=production && rm -rf docs && vue-cli-service build && cp -R public/CNAME docs && cp -R public/404.html docs && cp -R public/robots.txt docs"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "uikit": "^3.5.9",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.8",
+    "@vue/cli-plugin-eslint": "^4.5.8",
+    "@vue/cli-service": "^4.5.8",
+    "@vue/component-compiler-utils": "^3.2.0",
+    "babel-eslint": "10.1.0",
+    "compression-webpack-plugin": "^6.1.1",
+    "eslint": "^7.13.0",
+    "eslint-plugin-vue": "^7.1.0",
+    "prerender-spa-plugin": "^3.4.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
+    "vue-cli-plugin-webpack-bundle-analyzer": "^2.0.0",
+    "vue-fragment": "^1.5.1",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-router": "^3.4.9",
+    "vuex": "^3.5.1",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
