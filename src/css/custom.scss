@@ -265,4 +265,9 @@ a.uk-link-muted:hover,
 
 .uk-button-primary:hover {
   color: #000;
+  background: linear-gradient(90deg, rgba(250, 226, 45, 0.8) 0%, rgba(230, 180, 0, 0.8) 100%);
+}
+
+.uk-light .uk-button-primary {
+  background: #fff;
 }

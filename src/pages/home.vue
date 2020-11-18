@@ -117,10 +117,7 @@
       </div>
     </section>
 
-    <section
-      id="adventures"
-      class="uk-section-muted uk-section-overlap uk-dark"
-    >
+    <section class="uk-section-muted uk-section-overlap uk-dark">
       <div
         uk-img
         class="uk-section uk-section-large uk-flex uk-flex-middle"
@@ -185,7 +182,7 @@
       </div>
     </section>
 
-    <div class="uk-section-default">
+    <section class="uk-section-default">
       <div
         uk-img
         class="uk-background-norepeat uk-background-cover uk-background-center-center uk-background-fixed uk-section uk-section-large uk-light"
@@ -207,10 +204,42 @@
             </div>
           </div>
         </div>
-
       </div>
+    </section>
 
-    </div>
+    <section class="uk-section uk-section-muted uk-section-large">
+      <div class="uk-container uk-container-large">
+        <div
+          class="uk-child-width-1-3@m uk-grid-small uk-grid-match"
+          uk-grid
+        >
+          <div
+            v-for="(v, index) in videos"
+            :key="index"
+          >
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                <iframe
+                  :src="`https://www.youtube-nocookie.com/embed/${v.videokod}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1`"
+                  width="1920"
+                  height="1080"
+                  frameborder="0"
+                  allowfullscreen
+                  uk-responsive
+                  autoplay="false"
+                  uk-video="automute: true"
+                ></iframe>
+
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">{{ v.titel }}</h3>
+                <p>{{ v.info }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- <section
       id="about"
@@ -415,6 +444,7 @@
 
 <script>
 import axios from 'axios';
+import allaVideos from "../shared/videos";
 
 export default {
   name: "Home",
@@ -428,6 +458,7 @@ export default {
     messageMsg: '',
     loadingTxt: false,
     errorTxt: "",
+    videos: allaVideos,
   }),
   methods: {
     sendEmail() {
