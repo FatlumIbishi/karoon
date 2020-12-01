@@ -1,58 +1,34 @@
 <template>
   <fragment>
 
-    <section
-      uk-height-viewport
-      class="uk-section uk-section-xlarge uk-position-relative uk-flex uk-flex-middle"
-    >
+    <section class="uk-section-secondary uk-section uk-flex uk-flex-middle hero uk-light">
+      <video
+        src="../assets/video.mp4"
+        loop
+        muted
+        playsinline
+        uk-video="autoplay: inview"
+      ></video>
       <div class="uk-width-1-1">
-        <div
-          class="heroImage"
-          uk-parallax="y: 0, -100"
-        >
-          <img src="https://images.pexels.com/photos/235925/pexels-photo-235925.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-        </div>
-        <div
-          class="uk-container uk-container-large"
-          uk-parallax="y: 0, 200"
-        >
-          <div uk-grid>
-            <div class="uk-width-2-3@m">
-            </div>
-            <div class="uk-width-1-3@m">
-              <div
-                class="uk-card uk-card-large uk-card-body uk-margin-remove-first-child uk-margin uk-text-center uk-scrollspy-inview uk-animation-slide-bottom-medium yellowGradient"
-                uk-scrollspy-class
-              >
-                <div class="uk-h4 uk-margin-top uk-margin-remove-bottom">Ris med kärlek och kvalité</div>
-                <h1 class="uk-h2 uk-margin-top uk-margin-remove-bottom">KAROON</h1>
-                <div class="uk-h3 uk-margin-top">smakar helt<br>enkelt bättre</div>
-              </div>
+        <div class="uk-container uk-container-large">
+          <div class="uk-grid-item-match uk-flex-middle uk-width-expand@m uk-margin-xlarge-bottom">
+            <div class="uk-panel uk-width-1-1">
+              <h2 class="uk-h1 uk-margin-remove-vertical uk-text-center">
+                <img
+                  uk-svg
+                  src="../assets/karoon-logo.svg"
+                />
+              </h2>
             </div>
           </div>
-          <!-- <div
-          class="uk-margin-remove-top"
-          uk-grid
-        >
-          <div class="uk-width-2-3@m uk-first-column">
-            <div
-              class="uk-position-relative uk-position-z-index uk-scrollspy-inview uk-animation-slide-bottom-medium"
-              uk-scrollspy-class
-            >
-              <img
-                class="riceImage"
-                src="../assets/karoon.png"
-              />
-            </div>
-          </div>
-          <div class="uk-width-1-3@m">
-          </div>
-        </div> -->
         </div>
       </div>
     </section>
 
-    <section class="uk-section-default uk-section-overlap uk-dark">
+    <section
+      id="produkter"
+      class="uk-section-default uk-section-overlap uk-dark"
+    >
       <div
         uk-img
         class="uk-section uk-section-large uk-flex uk-flex-middle"
@@ -63,27 +39,25 @@
             class="uk-grid-large uk-margin-large"
             uk-grid
           >
-            <div class="uk-grid-item-match uk-margin-xlarge-top uk-width-1-3@m uk-height-1-1">
-              <div class="uk-panel uk-h3 uk-margin-small uk-text-left@m uk-text-center">Vid foten av</div>
-              <h3 class="uk-h2 uk-margin-small uk-text-left@m uk-text-center">
-                Himalaya
+            <div class="uk-grid-item-match uk-width-1-3@m uk-height-1-1">
+              <div class="uk-panel uk-h3 uk-margin-remove uk-text-left@m uk-text-center">Våra</div>
+              <h3 class="uk-h2 uk-margin-remove uk-text-left@m uk-text-center">
+                Produkter
               </h3>
-              <div class="uk-panel uk-text-large uk-margin-small uk-text-left@m uk-text-center">På de mest naturliga och bördiga marker odlas vårt långkorniga basmatiris.</div>
+              <div class="uk-panel uk-text-large uk-margin-medium uk-text-left@m uk-text-center">Det passar lika bra till att vara en del av en huvudrätt, som att vara en ingrediens i en sallad eller efterrätt.</div>
             </div>
             <div class="uk-width-2-3@m">
               <div
-                uk-slideshow="minHeight: 610;"
+                uk-slideshow="minHeight: 380;"
                 class="uk-margin uk-slideshow"
               >
                 <div class="uk-position-relative">
                   <ul class="uk-slideshow-items">
                     <li tabindex="-1">
                       <img
-                        class="uk-cover"
                         alt=""
                         uk-img="target: !.uk-slideshow-items"
-                        uk-cover
-                        src="https://images.pexels.com/photos/247597/pexels-photo-247597.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        src="../assets/produkter.png"
                       >
                     </li>
                   </ul>
@@ -103,78 +77,75 @@
                   </div>
                 </div>
               </div>
-              <div>
-                <p>Risets egenskaper och halten av kalcium, magnesium och kalium, som alla är nödvändiga för kroppens funktion och uppbyggnad, gör Karoon till ett utmärkt val för dig som vill äta god och näringsrik mat.
-                  Riset innehåller även kostfiber, som gör att du håller dig mätt längre. </p>
-                <a
-                  href=""
-                  class="uk-button uk-button-large uk-button-primary uk-border-pill"
-                >Läs mer</a>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="uk-section-muted uk-section-overlap uk-dark">
+    <section
+      id="varderingar"
+      class="uk-section-muted uk-section-overlap uk-dark"
+    >
       <div
         uk-img
         class="uk-section uk-section-large uk-flex uk-flex-middle"
         uk-height-viewport="offset-bottom: 20"
       >
         <div class="uk-container uk-container-large">
+          <h2 class="uk-h2 uk-text-center">Våra värderingar</h2>
           <div
-            class="uk-grid-large uk-margin-large"
+            class="uk-child-width-1-3@m"
             uk-grid
           >
-            <div class="uk-grid-item-match uk-width-1-3@m uk-height-1-1 uk-flex-last@m">
-              <div class="uk-panel uk-h3 uk-margin-small uk-text-left@m uk-text-center">Lätt &amp; luftig konsistens</div>
-              <h3 class="uk-h2 uk-margin-small uk-text-left@m uk-text-center">
-                med nötaktig smak
-              </h3>
-              <div class="uk-panel uk-text-large uk-margin-small uk-text-left@m uk-text-center">Det passar lika bra till att vara en del av en huvudrätt, som att vara en ingrediens i en sallad eller efterrätt. </div>
-            </div>
-            <div class="uk-width-2-3@m">
-              <div
-                uk-slideshow="minHeight: 610;"
-                class="uk-margin uk-slideshow"
-              >
-                <div class="uk-position-relative">
-                  <ul class="uk-slideshow-items">
-                    <li tabindex="-1">
-                      <img
-                        class="uk-cover"
-                        alt=""
-                        uk-img="target: !.uk-slideshow-items"
-                        uk-cover
-                        src="https://images.pexels.com/photos/4110260/pexels-photo-4110260.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                      >
-                    </li>
-                  </ul>
-                  <div class="uk-visible@s uk-light">
-                    <a
-                      class="uk-position-center-left uk-position-small uk-hidden-hover"
-                      href="#"
-                      uk-slidenav-previous
-                      uk-slideshow-item="previous"
-                    ></a>
-                    <a
-                      class="uk-position-center-right uk-position-small uk-hidden-hover"
-                      href="#"
-                      uk-slidenav-next
-                      uk-slideshow-item="next"
-                    ></a>
-                  </div>
+            <div>
+              <div class="uk-card uk-card-default">
+                <div class="uk-card-media-top uk-cover-container">
+                  <img
+                    class="rattvistImg"
+                    src="../assets/varderingar.jpg"
+                    alt=""
+                    uk-cover
+                  >
+                  <canvas height="300"></canvas>
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Rättvist</h3>
+                  <p>Givetvis får bönderna vi köper riset av rättvist betalt, likaså garanterar vi att det inte förekommer barnarbete i fabriken. För oss är detta en självklarhet, men vi känner ändå att vi behöver förmedla det till våra kunder, så det inte finns några oklarheter kring det.</p>
                 </div>
               </div>
-              <div>
-                <p>Risets egenskaper och halten av kalcium, magnesium och kalium, som alla är nödvändiga för kroppens funktion och uppbyggnad, gör Karoon till ett utmärkt val för dig som vill äta god och näringsrik mat.
-                  Riset innehåller även kostfiber, som gör att du håller dig mätt längre. </p>
-                <a
-                  href=""
-                  class="uk-button uk-button-large uk-button-primary uk-border-pill"
-                >Läs mer</a>
+            </div>
+            <div>
+              <div class="uk-card uk-card-default">
+                <div class="uk-card-media-top uk-cover-container">
+                  <img
+                    src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt=""
+                    uk-cover
+                  >
+                  <canvas height="300"></canvas>
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Miljö</h3>
+                  <p>Vi försöker att minimera skadliga effekter på miljön, genom att kontrollera jord, växtskyddsmedel, odlingar och att se till fabriken hanterar allt korrekt.
+                    Miljöarbetet är ju en pågående process och vi försöker alltid att bli bättre.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-default">
+                <div class="uk-card-media-top uk-cover-container">
+                  <img
+                    src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+                    alt=""
+                    uk-cover
+                  >
+                  <canvas height="300"></canvas>
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Kvalité</h3>
+                  <p>Vårt mål har hela tiden varit att få fram det bästa riset på marknaden, utan att kompromissa med våra värderingar. Vi har kombinerat modern teknologi med traditionellt kunnande och omtanke.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -185,8 +156,8 @@
     <section class="uk-section-default">
       <div
         uk-img
-        class="uk-background-norepeat uk-background-cover uk-background-center-center uk-background-fixed uk-section uk-section-large uk-light"
-        style="background-image: url('https://images.pexels.com/photos/1660898/pexels-photo-1660898.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');"
+        class="uk-background-norepeat uk-background-cover uk-background-center-center uk-background-fixed uk-section uk-section-large uk-light uk-background-blend-hard-light uk-background-secondary"
+        style="background-image: url('https://image.shutterstock.com/z/stock-photo-persian-honey-glazed-chicken-and-jeweled-rice-selective-focus-1006917820.jpg');"
       >
         <div class="uk-container uk-container-large">
           <div
@@ -194,8 +165,7 @@
             uk-grid
           >
             <div class="uk-width-1-1@m uk-first-column uk-text-center">
-              <h2 class="uk-h2 uk-text-center">Se våra goda recept</h2>
-              <div class="uk-text-large uk-text-center uk-margin-auto uk-width-xlarge">På de mest naturliga och bördiga marker odlas vårt långkorniga basmatiris.</div>
+              <h2 class="uk-h2 uk-text-center">Inpiration till din matlagning</h2>
               <a
                 class="uk-button uk-button-primary uk-button-large uk-border-pill uk-margin-medium-top"
                 href="#"
@@ -207,7 +177,143 @@
       </div>
     </section>
 
-    <section class="uk-section uk-section-muted uk-section-large">
+    <section
+      id="egenskaper"
+      class="uk-section-default uk-section-overlap uk-dark"
+    >
+      <div
+        uk-img
+        class="uk-section uk-section-large uk-flex uk-flex-middle"
+        uk-height-viewport="offset-bottom: 20"
+      >
+        <div class="uk-container uk-container-large">
+          <div
+            class="uk-grid-large uk-margin-large"
+            uk-grid
+          >
+            <div class="uk-grid-item-match uk-width-1-3@m uk-height-1-1">
+              <div class="uk-panel uk-h3 uk-margin-remove uk-text-left@m uk-text-center">Karoons</div>
+              <h3 class="uk-h2 uk-margin-remove uk-text-left@m uk-text-center">
+                Egenskaper
+              </h3>
+              <div class="uk-panel uk-text-large uk-margin-medium uk-text-left@m uk-text-center">Det passar lika bra till att vara en del av en huvudrätt, som att vara en ingrediens i en sallad eller efterrätt.</div>
+              <button class="uk-button uk-button-large uk-button-primary uk-border-pill uk-width-auto">Se näringsdeklaration</button>
+            </div>
+            <div class="uk-width-2-3@m">
+              <div
+                uk-slideshow="minHeight: 380;"
+                class="uk-margin uk-slideshow"
+              >
+                <div class="uk-position-relative">
+                  <ul class="uk-slideshow-items">
+                    <li tabindex="-1">
+                      <img
+                        alt=""
+                        uk-img="target: !.uk-slideshow-items"
+                        src="https://image.shutterstock.com/z/stock-photo-green-peas-basmati-rice-or-matar-pulav-served-with-plain-dal-775904398.jpg"
+                      >
+                    </li>
+                  </ul>
+                  <div class="uk-visible@s uk-light">
+                    <a
+                      class="uk-position-center-left uk-position-small uk-hidden-hover"
+                      href="#"
+                      uk-slidenav-previous
+                      uk-slideshow-item="previous"
+                    ></a>
+                    <a
+                      class="uk-position-center-right uk-position-small uk-hidden-hover"
+                      href="#"
+                      uk-slidenav-next
+                      uk-slideshow-item="next"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="omoss"
+      class="uk-section-muted uk-section-overlap uk-dark"
+    >
+      <div
+        uk-img
+        class="uk-section uk-section-large uk-flex uk-flex-middle"
+        uk-height-viewport="offset-bottom: 20"
+      >
+        <div class="uk-container uk-container-large">
+          <div
+            class="uk-grid-large uk-margin-large"
+            uk-grid
+          >
+            <div class="uk-grid-item-match uk-width-2-3@m uk-height-1-1 uk-flex-last@m">
+              <div class="uk-panel uk-h3 uk-margin-remove uk-text-left@m uk-text-center">Om</div>
+              <h3 class="uk-h2 uk-margin-remove uk-text-left@m uk-text-center">
+                Karoon
+              </h3>
+              <div class="uk-panel uk-text-large uk-margin-medium uk-text-left@m uk-text-center">Det passar lika bra till att vara en del av en huvudrätt, som att vara en ingrediens i en sallad eller efterrätt.</div>
+            </div>
+            <div class="uk-width-1-3@m">
+              <div
+                uk-slideshow="minHeight: 380;"
+                class="uk-margin uk-slideshow"
+              >
+                <div class="uk-position-relative">
+                  <ul class="uk-slideshow-items">
+                    <li tabindex="-1">
+                      <img
+                        alt=""
+                        uk-img="target: !.uk-slideshow-items"
+                        src="../assets/omoss.jpg"
+                      >
+                    </li>
+                  </ul>
+                  <div class="uk-visible@s uk-light">
+                    <a
+                      class="uk-position-center-left uk-position-small uk-hidden-hover"
+                      href="#"
+                      uk-slidenav-previous
+                      uk-slideshow-item="previous"
+                    ></a>
+                    <a
+                      class="uk-position-center-right uk-position-small uk-hidden-hover"
+                      href="#"
+                      uk-slidenav-next
+                      uk-slideshow-item="next"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="modal-example"
+      uk-modal
+    >
+      <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Headline</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="uk-text-right">
+          <button
+            class="uk-button uk-button-primary"
+            type="button"
+          >Stäng</button>
+        </p>
+      </div>
+    </div>
+
+    <section
+      id="video"
+      class="uk-section uk-section-default uk-section-large"
+    >
       <div class="uk-container uk-container-large">
         <div
           class="uk-child-width-1-3@m uk-grid-small uk-grid-match"

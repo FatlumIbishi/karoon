@@ -9,15 +9,18 @@
       // When the single page app is loaded further down in this file,
       // the correct url will be waiting in the browser's history for
       // the single page app to route accordingly.
-      (function (l) {
+      (function(l) {
         if (l.search) {
           var q = {};
           l.search
             .slice(1)
             .split("&")
-            .forEach(function (v) {
+            .forEach(function(v) {
               var a = v.split("=");
-              q[a[0]] = a.slice(1).join("=").replace(/~and~/g, "&");
+              q[a[0]] = a
+                .slice(1)
+                .join("=")
+                .replace(/~and~/g, "&");
             });
           if (q.p !== undefined) {
             window.history.replaceState(
@@ -36,4 +39,4 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "UA-178007969-1");</script><script src="https://www.google.com/recaptcha/api.js?render=explicit" async></script><link href="css/app.8b27d6f5.css" rel="preload" as="style"><link href="js/app.bcc19766.js" rel="preload" as="script"><link href="js/chunk-vendors.bd618a83.js" rel="preload" as="script"><link href="css/app.8b27d6f5.css" rel="stylesheet"></head><body><div id="app"></div><script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script><script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/js/all.min.js"></script><script src="js/chunk-vendors.bd618a83.js"></script><script src="js/app.bcc19766.js"></script></body></html>
+      gtag("config", "UA-178007969-1");</script><script src="https://www.google.com/recaptcha/api.js?render=explicit" async></script><link href="css/app.7b326655.css" rel="preload" as="style"><link href="js/app.ad2098d0.js" rel="preload" as="script"><link href="js/chunk-vendors.bd618a83.js" rel="preload" as="script"><link href="css/app.7b326655.css" rel="stylesheet"></head><body><div id="app"></div><script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script><script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/js/all.min.js"></script><script src="js/chunk-vendors.bd618a83.js"></script><script src="js/app.ad2098d0.js"></script></body></html>

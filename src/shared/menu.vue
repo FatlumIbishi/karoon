@@ -83,44 +83,75 @@
       uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-dark mainMenu; top: 80vh"
     >
       <nav class="uk-navbar-container">
-        <div class="uk-container uk-container-large">
+        <div class="uk-container uk-container-large uk-position-relative">
           <div uk-navbar>
-            <div class="uk-navbar-left">
-              <router-link
-                to="/"
+            <div class="uk-navbar-center">
+              <div class="uk-navbar-center-left">
+                <ul class="uk-navbar-nav">
+                  <li>
+                    <a
+                      uk-scroll
+                      href="#produkter"
+                    >Produkter</a>
+                  </li>
+                  <li>
+                    <a
+                      uk-scroll
+                      href="#aterforsaljare"
+                    >
+                      Återförsäljare
+                    </a>
+                  </li>
+                  <li>
+                    <router-link to="/recept">Recept</router-link>
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="/"
                 class="uk-navbar-item uk-logo"
               >
                 <img
-                  src="../assets/logo.png"
+                  uk-svg
+                  src="../assets/karoon-logo.svg"
                   alt="Logo"
-                  class="uk-margin-small-right logoImg"
+                  class="logoImg"
                 />
-              </router-link>
+              </a>
+              <div class="uk-navbar-center-right">
+                <ul class="uk-navbar-nav">
+                  <li>
+                    <a
+                      uk-scroll
+                      href="#varderingar"
+                    >
+                      Värderingar
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      uk-scroll
+                      href="#egenskaper"
+                    >
+                      Egenskaper
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      uk-scroll
+                      href="#kontakt"
+                    >
+                      Kontakt
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="uk-navbar-right">
-              <ul class="uk-navbar-nav">
-                <li><a
-                    uk-scroll
-                    href="#"
-                  >Karoon</a></li>
-                <li><a
-                    uk-scroll
-                    href="#"
-                  >Vart finns vi?</a></li>
-                <li><a
-                    uk-scroll
-                    href="#"
-                  >Recept</a></li>
-                <li><a
-                    uk-scroll
-                    href="#omoss"
-                  >Om oss</a></li>
-                <li><a
-                    uk-scroll
-                    href="#kontaktaoss"
-                  >Kontakta oss</a></li>
-              </ul>
-            </div>
+          </div>
+          <div class="socialmediamenu">
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
           </div>
         </div>
       </nav>
