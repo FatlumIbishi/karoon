@@ -3,84 +3,143 @@
 
     <!-- MOBILE -->
     <div
-      uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light adventureMenu; top: 50vh"
-      class="uk-hidden@m"
+      class="tm-header-mobile uk-hidden@m"
+      uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
     >
       <div class="uk-navbar-container">
-        <nav
-          uk-navbar="boundary-align: true; align: left; dropbar: true; mode: click"
-          class="uk-navbar"
-        >
+        <nav uk-navbar>
           <div class="uk-navbar-left">
-            <ul class="uk-navbar-nav">
-              <li>
-                <a
-                  class="uk-navbar-toggle"
-                  href="#sv-mobile"
-                  uk-toggle
-                >
-                  <div
-                    uk-navbar-toggle-icon
-                    class="uk-icon uk-navbar-toggle-icon"
-                  >
-                  </div>
-                </a>
-                <div
-                  ref="dropDownMenu"
-                  class="uk-navbar-dropdown uk-width"
-                >
-                  <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li @click="hideMenu">
-                      <a
-                        uk-scroll
-                        href="#"
-                      >Home</a>
-                    </li>
-                    <li @click="hideMenu">
-                      <a
-                        uk-scroll
-                        href="#adventures"
-                      >Adventures</a>
-                    </li>
-                    <li @click="hideMenu">
-                      <a
-                        uk-scroll
-                        href="#about"
-                      >About</a>
-                    </li>
-                    <li @click="hideMenu">
-                      <a
-                        uk-scroll
-                        href="#contact"
-                      >Contact us</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+            <a
+              class="uk-navbar-toggle"
+              href="#tm-mobile"
+              uk-toggle
+            >
+              <div
+                uk-navbar-toggle-icon
+                class="uk-icon uk-navbar-toggle-icon"
+              />
+            </a>
           </div>
           <div class="uk-navbar-center">
-            <router-link
-              to="/"
+            <a
+              href="/"
               class="uk-navbar-item uk-logo"
             >
               <img
-                height="50"
-                alt="Adventure 81"
-              />
-            </router-link>
-          </div>
-          <div class="uk-navbar-right menuPhone">
-            <i class="fas fa-phone"></i>
+                alt="Karoon Logo"
+                src="../assets/karoon-logo.svg"
+                class="logoImg"
+              ></a>
           </div>
         </nav>
+      </div>
+
+      <div
+        id="tm-mobile"
+        uk-offcanvas
+        mode="push"
+        overlay
+      >
+        <div class="uk-offcanvas-bar">
+          <button
+            class="uk-offcanvas-close uk-icon uk-close"
+            type="button"
+            uk-close
+          ></button>
+          <div
+            class="uk-child-width-1-1 uk-grid-stack"
+            uk-grid
+          >
+            <div class="uk-first-column">
+              <div class="uk-panel">
+                <ul class="uk-nav uk-nav-default">
+                  <li>
+                    <a
+                      uk-scroll
+                      href="#produkter"
+                    >Produkter</a>
+                  </li>
+                  <li>
+                    <a
+                      uk-scroll
+                      href="#aterforsaljare"
+                    >
+                      Återförsäljare
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      uk-scroll
+                      href="#varderingar"
+                    >
+                      Värderingar
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      uk-scroll
+                      href="#egenskaper"
+                    >
+                      Egenskaper
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      uk-scroll
+                      href="#kontakt"
+                    >
+                      Kontakt
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="uk-grid-margin uk-first-column">
+              <div class="uk-panel">
+                <ul
+                  class="uk-flex-inline uk-flex-middle uk-flex-nowrap uk-grid-medium uk-grid-stack"
+                  uk-grid
+                >
+                  <li>
+                    <a
+                      href="https://facebook.com/"
+                      class="uk-icon-link uk-icon"
+                    >
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://instagram.com/"
+                      class="uk-icon-link uk-icon"
+                    >
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://pinterest.com/"
+                      class="uk-icon-link uk-icon"
+                    >
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/channel/UCScfGdEgRCOh9YJdpGu82eQ"
+                      class="uk-icon-link uk-icon"
+                    >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- DESKTOP -->
     <div
       class="uk-visible@m"
-      uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-dark mainMenu; top: 80vh"
+      uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light mainMenu; top: 80vh"
     >
       <nav class="uk-navbar-container">
         <div class="uk-container uk-container-large uk-position-relative">

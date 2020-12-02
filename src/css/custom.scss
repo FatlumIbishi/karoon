@@ -1,6 +1,6 @@
 /* General */
 html {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 1em;
 }
 
@@ -34,7 +34,6 @@ html {
 .uk-h1,
 .uk-h2,
 .uk-h3,
-.uk-h4,
 .uk-h6,
 .uk-heading-2xlarge,
 .uk-heading-large,
@@ -44,14 +43,14 @@ html {
 h1,
 h2,
 h3,
-h4,
 h6 {
-  font-family: "Work Sans", serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
 .uk-h4,
 h4 {
-  font-family: "Manrope", serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 /* Firefox fix */
@@ -68,160 +67,13 @@ h4 {
 .uk-h5,
 h5,
 .uk-subnav>*> :first-child {
-  font-family: "Manrope", serif;
+  font-family: 'Manrope', sans-serif;
   text-transform: capitalize;
-  font-size: 1em;
-}
-
-.uk-navbar-nav>li:hover>a,
-.uk-navbar-nav>li>a.uk-open,
-.uk-navbar-nav>li>a:focus,
-.uk-navbar-dropdown-nav>li>a:focus,
-.uk-navbar-dropdown-nav>li>a:hover,
-.uk-subnav>*>a:focus,
-.uk-subnav>*>a:hover,
-.uk-link-muted a:hover,
-.uk-link-toggle:focus .uk-link-muted,
-.uk-link-toggle:hover .uk-link-muted,
-a:hover,
-a.uk-link-muted:hover,
-.uk-navbar-dropdown-nav .uk-accordion-title:hover {
-  color: var(--main);
-}
-
-.uk-navbar-nav>li>a.active {
-  color: var(--main);
-}
-
-.uk-button-text::before {
-  border-bottom: 2px solid var(--main) !important;
-}
-
-.uk-thumbnav img {
-  width: 100px;
-  height: 75px;
-  object-fit: cover;
-}
-
-.uk-badge {
-  padding: 5px 10px;
-}
-
-.uk-badge i {
-  padding-right: 3px;
-}
-
-/* Modal Fixes */
-@media screen and (max-width: 640px) {
-  .uk-modal-dialog {
-    min-height: -webkit-fill-available;
-  }
-
-  .uk-modal-dialog [uk-height-viewport] {
-    min-height: calc(50vh) !important;
-  }
-
-  .uk-modal-full::before {
-    content: "";
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
-}
-
-/* Fix Submenu Mobile */
-.uk-navbar-dropdown-nav .uk-accordion-title,
-.uk-navbar-dropdown-nav .uk-accordion-content a {
-  color: #999;
-  font-size: 0.875rem;
-  padding: 5px 0;
-}
-
-.uk-navbar-dropdown-nav .uk-accordion-content {
-  border-left: 1px solid #e5e5e5;
-}
-
-.uk-navbar-dropdown-nav .uk-accordion-content a {
-  padding-left: 20px;
-}
-
-.uk-navbar-dropdown-nav .uk-accordion-content a:hover {
-  color: var(--main);
-}
-
-.uk-navbar-dropdown-dropbar .uk-search-input {
-  height: 60px;
-}
-
-.uk-navbar .uk-navbar-toggle {
-  transition: all 0.2s ease;
-}
-
-.uk-navbar .uk-navbar-toggle.uk-open {
-  opacity: 0;
-}
-
-/* Select Icon Fix */
-.uk-form-icon~.uk-select {
-  padding-left: 40px !important;
-}
-
-/* Input Placeholder */
-.inputPlaceholder {
-  position: relative;
-}
-
-.inputPlaceholder + .inputPlaceholder {
-  margin-top: 20px;
-}
-
-.inputPlaceholder input:focus,
-.inputPlaceholder textarea:focus {
-  border-color: rgba(255, 255, 255, 0.5) !important;
-}
-
-.inputPlaceholder input ~ label,
-.inputPlaceholder textarea ~ label {
-  pointer-events: none;
-  position: absolute;
-  top: -13px;
-  left: 11px;
-  color: var(--main);
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-.inputPlaceholder input:placeholder-shown ~ label,
-.inputPlaceholder textarea:placeholder-shown ~ label {
-  position: absolute;
-  top: 9px;
-  font-weight: initial;
-  color: #00000062;
-}
-
-.inputPlaceholder input:placeholder-shown.uk-form-large ~ label,
-.inputPlaceholder textarea:placeholder-shown.uk-form-large ~ label {
-  font-size: 1.25rem;
-  top: 13px;
-  left: 13px;
-}
-
-.inputPlaceholder textarea.uk-form-large {
-  padding-top: 12px;
 }
 
 /* Menu */
 .uk-navbar-container:not(.uk-navbar-transparent) {
   box-shadow: #000 0px -40px 50px;
-}
-
-.uk-navbar-transparent .uk-navbar-nav > li > a,
-.uk-navbar-transparent .socialmediamenu a {
-  color: white;
 }
 
 .logoImg,
@@ -276,7 +128,8 @@ a.uk-link-muted:hover,
 }
 
 .hero svg {
-  height: 40vh;
+  height: 38vh;
+  width: 100%;
 }
 
 .hero .st0 {
@@ -287,13 +140,10 @@ a.uk-link-muted:hover,
   background: linear-gradient(90deg, #FAE32D 0%, #E6B500 100%);
 }
 
-.riceImage {
-  height: 450px;
-}
-
 /* Button */
 .uk-button-primary {
   color: #000;
+  border: none;
   background: linear-gradient(90deg, #FAE32D 0%, #E6B500 100%);
 }
 
@@ -309,4 +159,14 @@ a.uk-link-muted:hover,
 /* Värderingar */
 .rattvistImg {
   top: 70%;
+}
+
+/* Återförsäljare */
+#aterforsaljare .uk-card-media-top img {
+  height: 100px;
+}
+
+.noHero {
+  height: 80px;
+  background-color: #000;
 }

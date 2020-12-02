@@ -27,55 +27,40 @@
 
     <section
       id="produkter"
-      class="uk-section-default uk-section-overlap uk-dark"
+      class="uk-section-default uk-section uk-section-large"
     >
-      <div
-        uk-img
-        class="uk-section uk-section-large uk-flex uk-flex-middle"
-        uk-height-viewport="offset-bottom: 20"
-      >
-        <div class="uk-container uk-container-large">
-          <div
-            class="uk-grid-large uk-margin-large"
-            uk-grid
-          >
-            <div class="uk-grid-item-match uk-width-1-3@m uk-height-1-1">
-              <div class="uk-panel uk-h3 uk-margin-remove uk-text-left@m uk-text-center">Våra</div>
-              <h3 class="uk-h2 uk-margin-remove uk-text-left@m uk-text-center">
-                Produkter
-              </h3>
-              <div class="uk-panel uk-text-large uk-margin-medium uk-text-left@m uk-text-center">Det passar lika bra till att vara en del av en huvudrätt, som att vara en ingrediens i en sallad eller efterrätt.</div>
+      <div class="uk-container uk-container-large">
+        <div
+          class="uk-grid-margin"
+          uk-grid
+        >
+          <div class="uk-grid-item-match uk-flex-middle uk-width-1-3@m">
+            <div class="uk-panel uk-width-1-1">
+              <h2 class="uk-h1 uk-margin-remove-top">
+                Våra produkter
+              </h2>
+              <div class="uk-margin-medium uk-margin-remove-top">
+                Ett naturligt gott och hälsosamt basmatiris. Våra påsar finns i 1, 2, 5, 10 eller 20 kilo. 1kg räcker till ca 13 måltider för 1 person.
+              </div>
+              <div class="uk-margin-medium">
+                <a
+                  class="uk-button uk-button-primary uk-button-large uk-border-pill"
+                  uk-scroll
+                  href="#aterforsaljare"
+                >
+                  Hitta återförsäljare
+                </a>
+              </div>
             </div>
-            <div class="uk-width-2-3@m">
-              <div
-                uk-slideshow="minHeight: 380;"
-                class="uk-margin uk-slideshow"
-              >
-                <div class="uk-position-relative">
-                  <ul class="uk-slideshow-items">
-                    <li tabindex="-1">
-                      <img
-                        alt=""
-                        uk-img="target: !.uk-slideshow-items"
-                        src="../assets/produkter.png"
-                      >
-                    </li>
-                  </ul>
-                  <div class="uk-visible@s uk-light">
-                    <a
-                      class="uk-position-center-left uk-position-small uk-hidden-hover"
-                      href="#"
-                      uk-slidenav-previous
-                      uk-slideshow-item="previous"
-                    ></a>
-                    <a
-                      class="uk-position-center-right uk-position-small uk-hidden-hover"
-                      href="#"
-                      uk-slidenav-next
-                      uk-slideshow-item="next"
-                    ></a>
-                  </div>
-                </div>
+          </div>
+          <div class="uk-grid-item-match uk-flex-middle uk-width-2-3@m">
+            <div class="uk-panel uk-width-1-1">
+              <div class="uk-margin">
+                <img
+                  alt=""
+                  uk-img
+                  src="../assets/produkter.png"
+                >
               </div>
             </div>
           </div>
@@ -85,67 +70,61 @@
 
     <section
       id="varderingar"
-      class="uk-section-muted uk-section-overlap uk-dark"
+      class="uk-section uk-section-large uk-section-muted"
     >
-      <div
-        uk-img
-        class="uk-section uk-section-large uk-flex uk-flex-middle"
-        uk-height-viewport="offset-bottom: 20"
-      >
-        <div class="uk-container uk-container-large">
-          <h2 class="uk-h2 uk-text-center">Våra värderingar</h2>
-          <div
-            class="uk-child-width-1-3@m"
-            uk-grid
-          >
-            <div>
-              <div class="uk-card uk-card-default">
-                <div class="uk-card-media-top uk-cover-container">
-                  <img
-                    class="rattvistImg"
-                    src="../assets/varderingar.jpg"
-                    alt=""
-                    uk-cover
-                  >
-                  <canvas height="300"></canvas>
-                </div>
-                <div class="uk-card-body">
-                  <h3 class="uk-card-title">Rättvist</h3>
-                  <p>Givetvis får bönderna vi köper riset av rättvist betalt, likaså garanterar vi att det inte förekommer barnarbete i fabriken. För oss är detta en självklarhet, men vi känner ändå att vi behöver förmedla det till våra kunder, så det inte finns några oklarheter kring det.</p>
-                </div>
+      <div class="uk-container uk-container-large">
+        <h2 class="uk-h2 uk-text-center">Våra värderingar</h2>
+        <div
+          class="uk-child-width-1-3@m uk-grid-match"
+          uk-grid
+        >
+          <div>
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top uk-cover-container">
+                <img
+                  class="rattvistImg"
+                  src="../assets/varderingar.jpg"
+                  alt=""
+                  uk-cover
+                >
+                <canvas height="300"></canvas>
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Rättvist</h3>
+                <p>Givetvis får bönderna vi köper riset av rättvist betalt, likaså garanterar vi att det inte förekommer barnarbete i fabriken. För oss är detta en självklarhet, men vi känner ändå att vi behöver förmedla det till våra kunder, så det inte finns några oklarheter kring det.</p>
               </div>
             </div>
-            <div>
-              <div class="uk-card uk-card-default">
-                <div class="uk-card-media-top uk-cover-container">
-                  <img
-                    src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    alt=""
-                    uk-cover
-                  >
-                  <canvas height="300"></canvas>
-                </div>
-                <div class="uk-card-body">
-                  <h3 class="uk-card-title">Miljö</h3>
-                  <p>Vi försöker att minimera skadliga effekter på miljön, genom att kontrollera jord, växtskyddsmedel, odlingar och att se till fabriken hanterar allt korrekt.
-                    Miljöarbetet är ju en pågående process och vi försöker alltid att bli bättre.</p>
-                </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top uk-cover-container">
+                <img
+                  src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  alt=""
+                  uk-cover
+                >
+                <canvas height="300"></canvas>
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Miljö</h3>
+                <p>Vi försöker att minimera skadliga effekter på miljön, genom att kontrollera jord, växtskyddsmedel, odlingar och att se till fabriken hanterar allt korrekt.
+                  Miljöarbetet är ju en pågående process och vi försöker alltid att bli bättre.</p>
               </div>
             </div>
-            <div>
-              <div class="uk-card uk-card-default">
-                <div class="uk-card-media-top uk-cover-container">
-                  <img
-                    src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
-                    alt=""
-                    uk-cover
-                  >
-                  <canvas height="300"></canvas>
-                </div>
-                <div class="uk-card-body">
-                  <h3 class="uk-card-title">Kvalité</h3>
-                  <p>Vårt mål har hela tiden varit att få fram det bästa riset på marknaden, utan att kompromissa med våra värderingar. Vi har kombinerat modern teknologi med traditionellt kunnande och omtanke.</p>
-                </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top uk-cover-container">
+                <img
+                  src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+                  alt=""
+                  uk-cover
+                >
+                <canvas height="300"></canvas>
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Kvalité</h3>
+                <p>Vårt mål har hela tiden varit att få fram det bästa riset på marknaden, utan att kompromissa med våra värderingar. Vi har kombinerat modern teknologi med traditionellt kunnande och omtanke.</p>
               </div>
             </div>
           </div>
@@ -156,8 +135,8 @@
     <section class="uk-section-default">
       <div
         uk-img
-        class="uk-background-norepeat uk-background-cover uk-background-center-center uk-background-fixed uk-section uk-section-large uk-light uk-background-blend-hard-light uk-background-secondary"
-        style="background-image: url('https://image.shutterstock.com/z/stock-photo-persian-honey-glazed-chicken-and-jeweled-rice-selective-focus-1006917820.jpg');"
+        class="uk-background-norepeat uk-background-cover uk-background-center-center uk-background-fixed uk-section uk-section-large uk-light uk-background-secondary"
+        style="background-image: url('https://images.pexels.com/photos/4033639/pexels-photo-4033639.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');"
       >
         <div class="uk-container uk-container-large">
           <div
@@ -179,56 +158,40 @@
 
     <section
       id="egenskaper"
-      class="uk-section-default uk-section-overlap uk-dark"
+      class="uk-section-default uk-section uk-section-large"
     >
-      <div
-        uk-img
-        class="uk-section uk-section-large uk-flex uk-flex-middle"
-        uk-height-viewport="offset-bottom: 20"
-      >
-        <div class="uk-container uk-container-large">
-          <div
-            class="uk-grid-large uk-margin-large"
-            uk-grid
-          >
-            <div class="uk-grid-item-match uk-width-1-3@m uk-height-1-1">
-              <div class="uk-panel uk-h3 uk-margin-remove uk-text-left@m uk-text-center">Karoons</div>
-              <h3 class="uk-h2 uk-margin-remove uk-text-left@m uk-text-center">
-                Egenskaper
-              </h3>
-              <div class="uk-panel uk-text-large uk-margin-medium uk-text-left@m uk-text-center">Det passar lika bra till att vara en del av en huvudrätt, som att vara en ingrediens i en sallad eller efterrätt.</div>
-              <button class="uk-button uk-button-large uk-button-primary uk-border-pill uk-width-auto">Se näringsdeklaration</button>
+      <div class="uk-container uk-container-large">
+        <div
+          class="uk-grid-margin"
+          uk-grid
+        >
+          <div class="uk-grid-item-match uk-flex-middle uk-width-1-2@m uk-flex-last@m">
+            <div class="uk-panel uk-width-1-1">
+              <h2 class="uk-h1 uk-margin-remove-top">
+                Risets Egenskaper
+              </h2>
+              <div class="uk-panel uk-margin-medium uk-margin-remove-top">
+                Karoon ris har en lätt, lufitg konsistens med en lite nötaktig smak. Den passar lika bra till att vara en del av en huvudrätt, som att vara en ingrediens i en sallad eller efterrätt.
+              </div>
+              <div class="uk-margin-medium">
+                <a
+                  class="uk-button uk-button-primary uk-button-large uk-border-pill"
+                  uk-scroll
+                  href="#aterforsaljare"
+                >
+                  Se näringsdeklaration
+                </a>
+              </div>
             </div>
-            <div class="uk-width-2-3@m">
-              <div
-                uk-slideshow="minHeight: 380;"
-                class="uk-margin uk-slideshow"
-              >
-                <div class="uk-position-relative">
-                  <ul class="uk-slideshow-items">
-                    <li tabindex="-1">
-                      <img
-                        alt=""
-                        uk-img="target: !.uk-slideshow-items"
-                        src="https://image.shutterstock.com/z/stock-photo-green-peas-basmati-rice-or-matar-pulav-served-with-plain-dal-775904398.jpg"
-                      >
-                    </li>
-                  </ul>
-                  <div class="uk-visible@s uk-light">
-                    <a
-                      class="uk-position-center-left uk-position-small uk-hidden-hover"
-                      href="#"
-                      uk-slidenav-previous
-                      uk-slideshow-item="previous"
-                    ></a>
-                    <a
-                      class="uk-position-center-right uk-position-small uk-hidden-hover"
-                      href="#"
-                      uk-slidenav-next
-                      uk-slideshow-item="next"
-                    ></a>
-                  </div>
-                </div>
+          </div>
+          <div class="uk-grid-item-match uk-flex-middle uk-width-1-2@m">
+            <div class="uk-panel uk-width-1-1">
+              <div class="uk-margin">
+                <img
+                  alt=""
+                  uk-img
+                  src="https://image.shutterstock.com/z/stock-photo-green-peas-basmati-rice-or-matar-pulav-served-with-plain-dal-775904398.jpg"
+                >
               </div>
             </div>
           </div>
@@ -238,54 +201,127 @@
 
     <section
       id="omoss"
-      class="uk-section-muted uk-section-overlap uk-dark"
+      class="uk-section-muted uk-section uk-section-large"
     >
-      <div
-        uk-img
-        class="uk-section uk-section-large uk-flex uk-flex-middle"
-        uk-height-viewport="offset-bottom: 20"
-      >
-        <div class="uk-container uk-container-large">
+      <div class="uk-container uk-container-large">
+        <div
+          class="uk-grid-margin"
+          uk-grid
+        >
+          <div class="uk-grid-item-match uk-flex-middle uk-width-2-3@m">
+            <div class="uk-panel uk-width-1-1">
+              <h2
+                class="uk-h1 uk-margin-remove-top"
+                uk-scrollspy-class
+              >
+                Om Karooon
+              </h2>
+              <div
+                class="uk-grid-large uk-child-width-1-1 uk-grid-margin-large uk-grid-stack"
+                uk-grid
+              >
+                <div class="uk-width-1-1@m uk-first-column">
+                  <div class="uk-margin">
+                    <div
+                      class="uk-child-width-1-1 uk-child-width-1-2@s uk-grid-large uk-grid-match"
+                      uk-grid
+                    >
+                      <div>
+                        <div class="uk-panel uk-margin-remove-first-child">
+                          <h3 class="uk-margin-top uk-margin-remove-bottom">Odlingar</h3>
+                          <div class="uk-panel uk-margin-top">Vi har erfarna medarbetare som köper ris direkt från lokala bönder. Riskornen sköljs sedan flera gånger innan det börjar behandlas, vilket är viktigt för både kvalité och smak. Då vi är med i hela processen, från odlingar och fram till färdig produkt, så har vi även inblick i användandet av gödsel och växtskyddsmedel. Detta gör att halter av rester från bekämpningsmedel är mycket låga. Riset testas regelbundet i både Sverige och Tyskland för att säkerställa det. Vi vill att alla ska kunna känna sig trygga med att äta Karoon.</div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="uk-panel uk-margin-remove-first-child">
+                          <h3 class="uk-margin-top uk-margin-remove-bottom">Anläggningar</h3>
+                          <div class="uk-panel uk-margin-top">Under senare år har hela anläggningen uppdaterats och allt görs nu digitalt, vilket underlättar hela framställningen. Sensorer känner av, så att temperatur och luftfuktighet alltid är på rätt nivåer när det torkas och lagras. Den noggranna kontrollen gör, att riset kan bevara sin doft och smak samt att Karoon inte har några brutna riskorn. Den digitala utrustningen som används i vår anläggning är från
+                            <a
+                              href="https://satake-group.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Satake
+                            </a>, ett företag vars apparaturer är världsledande inom risframställning.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="uk-grid-item-match uk-flex-middle uk-width-1-3@m">
+            <div class="uk-panel uk-width-1-1">
+              <div
+                class="uk-margin uk-scrollspy-inview uk-animation-slide-right-medium"
+                uk-scrollspy-class
+              >
+                <img
+                  alt=""
+                  uk-img
+                  src="../assets/omoss.jpg"
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="aterforsaljare"
+      class="uk-section uk-section-large uk-section-default"
+    >
+      <div class="uk-container uk-container-large">
+        <h2 class="uk-h2 uk-text-center">Återförsäljare</h2>
+        <div class="uk-panel uk-text-center uk-margin-medium uk-margin-remove-top">
+          Vårt ris finns att köpa i de flesta asiatiska livsmedelsbutiker och orienthus i Göteborg, Helsingborg, Karlstad, Malmö, Mellerud, Vänersborg, Lysekil, Uddevalla och Stockholm.
+        </div>
+        <div class="uk-margin-medium">
           <div
-            class="uk-grid-large uk-margin-large"
+            class="uk-child-width-1-3@m uk-grid-match"
             uk-grid
           >
-            <div class="uk-grid-item-match uk-width-2-3@m uk-height-1-1 uk-flex-last@m">
-              <div class="uk-panel uk-h3 uk-margin-remove uk-text-left@m uk-text-center">Om</div>
-              <h3 class="uk-h2 uk-margin-remove uk-text-left@m uk-text-center">
-                Karoon
-              </h3>
-              <div class="uk-panel uk-text-large uk-margin-medium uk-text-left@m uk-text-center">Det passar lika bra till att vara en del av en huvudrätt, som att vara en ingrediens i en sallad eller efterrätt.</div>
+            <div>
+              <div class="uk-card">
+                <div class="uk-card-media-top uk-text-center">
+                  <img
+                    src="../assets/icakvantum.svg"
+                    alt=""
+                  >
+                </div>
+                <div class="uk-card-body uk-text-center">
+                  <h3 class="uk-card-title">ICA Kvantum</h3>
+                  <p>Kungsbacka, Kungsmässan</p>
+                </div>
+              </div>
             </div>
-            <div class="uk-width-1-3@m">
-              <div
-                uk-slideshow="minHeight: 380;"
-                class="uk-margin uk-slideshow"
-              >
-                <div class="uk-position-relative">
-                  <ul class="uk-slideshow-items">
-                    <li tabindex="-1">
-                      <img
-                        alt=""
-                        uk-img="target: !.uk-slideshow-items"
-                        src="../assets/omoss.jpg"
-                      >
-                    </li>
-                  </ul>
-                  <div class="uk-visible@s uk-light">
-                    <a
-                      class="uk-position-center-left uk-position-small uk-hidden-hover"
-                      href="#"
-                      uk-slidenav-previous
-                      uk-slideshow-item="previous"
-                    ></a>
-                    <a
-                      class="uk-position-center-right uk-position-small uk-hidden-hover"
-                      href="#"
-                      uk-slidenav-next
-                      uk-slideshow-item="next"
-                    ></a>
-                  </div>
+            <div>
+              <div class="uk-card">
+                <div class="uk-card-media-top uk-text-center">
+                  <img
+                    src="../assets/icanara.svg"
+                    alt=""
+                  >
+                </div>
+                <div class="uk-card-body uk-text-center">
+                  <h3 class="uk-card-title">ICA Nära</h3>
+                  <p>Mölnlycke</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card">
+                <div class="uk-card-media-top uk-text-center">
+                  <img
+                    src="../assets/orienthus.png"
+                    alt=""
+                  >
+                </div>
+                <div class="uk-card-body uk-text-center">
+                  <h3 class="uk-card-title">Göteborgs Orienthus</h3>
                 </div>
               </div>
             </div>
@@ -294,25 +330,9 @@
       </div>
     </section>
 
-    <div
-      id="modal-example"
-      uk-modal
-    >
-      <div class="uk-modal-dialog uk-modal-body">
-        <h2 class="uk-modal-title">Headline</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="uk-text-right">
-          <button
-            class="uk-button uk-button-primary"
-            type="button"
-          >Stäng</button>
-        </p>
-      </div>
-    </div>
-
     <section
       id="video"
-      class="uk-section uk-section-default uk-section-large"
+      class="uk-section uk-section-muted uk-section-large"
     >
       <div class="uk-container uk-container-large">
         <div
@@ -347,209 +367,160 @@
       </div>
     </section>
 
-    <!-- <section
-      id="about"
+    <section
+      id="kontakt"
       class="uk-section uk-section-large uk-section-default"
-      uk-height-viewport="offset-bottom: 20"
     >
       <div class="uk-container uk-container-large">
-        <h3 class="uk-h1 uk-margin-large uk-text-left@m uk-text-center">
-          About
-        </h3>
-        <div
-          class="uk-grid-column-small uk-margin-small"
-          uk-grid
-        >
-          <div class="uk-grid-item-match uk-flex-middle uk-width-2-3@s uk-first-column">
-            <div class="uk-panel uk-width-1-1">
-              <div class="uk-margin uk-text-center">
-                <div
-                  class="uk-child-width-1-1 uk-child-width-1-2@s uk-grid-small"
-                  uk-grid
-                >
-                  <div class="uk-first-column">
-                    <div class="uk-inline-clip uk-light">
-                      <img
-                        alt=""
-                        uk-img
-                        src="../assets/boat-1.jpg"
-                      >
+        <div uk-grid>
+          <div class="uk-width-1-3@m">
+            <div class="uk-card">
+              <h3 class="uk-card-title">Kontakta oss</h3>
+              <ul class="uk-list uk-width-medium">
+                <li>
+                  <div
+                    class="uk-child-width-auto uk-grid-small uk-flex-bottom"
+                    uk-grid
+                  >
+                    <div class="uk-width-expand uk-first-column">
+                      <div class="uk-margin-remove">
+                        <i class="fas fa-map-marker-alt" /><span class="uk-margin-small-left">Vart</span>
+                      </div>
+                    </div>
+                    <div>
+                      <div>Göteborg</div>
                     </div>
                   </div>
-                  <div>
-                    <div class="uk-inline-clip uk-light">
-                      <img
-                        alt=""
-                        uk-img
-                        src="../assets/boat-2.jpg"
-                      >
+                </li>
+                <li>
+                  <div
+                    class="uk-child-width-auto uk-grid-small uk-flex-bottom"
+                    uk-grid
+                  >
+                    <div class="uk-width-expand uk-first-column">
+                      <div class="uk-margin-remove">
+                        <i class="fas fa-mobile-alt" /><span class="uk-margin-small-left">Tel</span>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="tel:">+46 707-07 07 07</a>
                     </div>
                   </div>
-                </div>
-              </div>
+                </li>
+                <li>
+                  <div
+                    class="uk-child-width-auto uk-grid-small uk-flex-bottom"
+                    uk-grid
+                  >
+                    <div class="uk-width-expand uk-first-column">
+                      <div class="uk-margin-remove">
+                        <i class="far fa-envelope-open" /><span class="uk-margin-small-left">Mail</span>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="mailto: info@karoon.se">info@karoon.se</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="uk-grid-item-match uk-flex-middle uk-width-1-3@s">
-            <div class="uk-panel uk-width-1-1">
-              <h3 class="uk-h4 uk-text-center uk-margin-remove-bottom">On the beautiful waters of Marco Island</h3>
-              <hr class="uk-divider-small uk-text-center">
-              <div class="uk-panel uk-margin uk-width-medium uk-margin-auto uk-text-center">Let us take you on a day time or dinner sunset cruise on the beautiful waters of Marco Island,
-                Naples, Isles of Capri and 10,000 Islands along the Golf of Mexico coast line with daily excursions on our 40' yacht.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="uk-grid-column-small uk-margin-small"
-          uk-grid
-        >
-          <div class="uk-grid-item-match uk-flex-middle uk-width-2-3@s">
-            <div class="uk-panel uk-width-1-1">
-              <div class="uk-margin-remove-vertical">
-                <img
-                  alt=""
-                  uk-img
-                  class="aboutImg"
-                  src="../assets/joshua.jpg"
-                >
-              </div>
-            </div>
-          </div>
-          <div class="uk-grid-item-match uk-flex-middle uk-width-1-3@s uk-flex-first@s uk-first-column">
-            <div class="uk-panel uk-width-1-1">
-              <h3 class="uk-h4 uk-text-center">Joshua James Skinner</h3>
-              <hr class="uk-divider-small uk-text-center">
-              <div class="uk-panel uk-margin uk-width-medium uk-margin-auto uk-text-center">Positive, soft spoken and funny. Josh is originally from Minocqua Wisconsin.
-                He moved to Florida to pursue his dreams of living and working on the water.
-                Josh then became a Licensed Master Captain and PADI Dive instructor.
-                With careful consideration he bought the 40' yacht
-                to offer dream vacations for one and all.</div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="uk-grid-column-small uk-margin-small"
-          uk-grid
-        >
-          <div class="uk-grid-item-match uk-flex-middle uk-width-2-3@s uk-flex-first@s">
-            <div class="uk-panel uk-width-1-1">
-              <div class="uk-margin-remove-vertical">
-                <img
-                  alt=""
-                  uk-img
-                  class="aboutImg top"
-                  src="../assets/luxury.jpg"
-                >
-              </div>
-            </div>
-          </div>
-          <div class="uk-grid-item-match uk-flex-middle uk-width-1-3@s uk-flex-first@s uk-first-column">
-            <div class="uk-panel uk-width-1-1">
-              <h3 class="uk-h4 uk-text-center">Luxury vacations</h3>
-              <hr class="uk-divider-small uk-text-center">
-              <div class="uk-panel uk-margin uk-width-medium uk-margin-auto uk-text-center">We offer standard and custom charters, with industries most competitive
-                pricing cruise which means everyone can experience luxury vacations.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- <section
-      id="contact"
-      class="uk-section-muted uk-section uk-section-large"
-    >
-      <div class="uk-container uk-container-large">
-        <div
-          class="uk-grid-large uk-grid-margin-large"
-          uk-grid
-        >
-          <div class="uk-grid-item-match uk-flex-middle uk-width-expand@m uk-visible@m">
-            <div class="uk-panel uk-width-1-1">
-              <div class="uk-margin uk-text-center">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4699.828306657711!2d-81.72726112300585!3d25.981852533741353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88daef8596ccb7d7%3A0x9ffb99c7acee95da!2s387%20Capri%20Blvd%2C%20Naples%2C%20FL%2034113%2C%20USA!5e0!3m2!1sen!2sse!4v1604660147120!5m2!1sen!2sse"
-                  width="600"
-                  height="450"
-                  frameborder="0"
-                  style="border:0;"
-                  allowfullscreen=""
-                  aria-hidden="false"
-                  tabindex="0"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-          <div class="uk-grid-item-match uk-flex-middle uk-width-expand@m uk-first-column">
-            <div class="uk-panel uk-width-1-1">
-              <h3 class="uk-h2">Contact us</h3>
-              <form
-                v-if="!loadingTxt"
-                @submit.prevent="sendEmail"
-                method="POST"
+          <div class="uk-width-2-3@m">
+            <form class="uk-form-stacked">
+              <div
+                uk-grid
+                class="uk-margin"
               >
-                <div class="inputPlaceholder">
-                  <input
-                    class="uk-input uk-form-large"
-                    type="text"
-                    name="name"
-                    v-model="nameMsg"
-                    placeholder=" "
-                  >
-                  <label>Name*</label>
+                <div class="uk-width-1-2@s">
+                  <label
+                    class="uk-form-label"
+                    for="form-stacked-text"
+                  >Ditt namn*</label>
+                  <div class="uk-form-controls">
+                    <input
+                      class="uk-input"
+                      id="form-stacked-text"
+                      name="name"
+                      placeholder="Skriv in ditt namn"
+                    >
+                  </div>
                 </div>
-                <div class="inputPlaceholder">
-                  <input
-                    class="uk-input uk-form-large"
-                    type="email"
-                    name="_replyto"
-                    v-model="emailMsg"
-                    placeholder=" "
-                  >
-                  <label>Mail*</label>
+                <div class="uk-width-1-2@s">
+                  <label
+                    class="uk-form-label"
+                    for="form-stacked-text"
+                  >Email*</label>
+                  <div class="uk-form-controls">
+                    <input
+                      class="uk-input"
+                      id="form-stacked-text"
+                      type="email"
+                      placeholder="Skriv in din mailadress"
+                    >
+                  </div>
                 </div>
-                <div class="inputPlaceholder">
+              </div>
+              <div
+                uk-grid
+                class="uk-margin"
+              >
+                <div class="uk-width-1-2@s">
+                  <label
+                    class="uk-form-label"
+                    for="form-stacked-text"
+                  >Telefon</label>
+                  <div class="uk-form-controls">
+                    <input
+                      class="uk-input"
+                      id="form-stacked-text"
+                      type="tel"
+                      placeholder="Skriv ditt telefonnummer"
+                    >
+                  </div>
+                </div>
+                <div class="uk-width-1-2@s">
+                  <label
+                    class="uk-form-label"
+                    for="form-stacked-text"
+                  >Företag</label>
+                  <div class="uk-form-controls">
+                    <input
+                      class="uk-input"
+                      id="form-stacked-text"
+                      type="text"
+                      placeholder=" "
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="uk-margin">
+                <label
+                  class="uk-form-label"
+                  for="form-stacked-text"
+                >Meddelande</label>
+                <div class="uk-form-controls">
                   <textarea
-                    class="uk-textarea uk-form-large"
+                    class="uk-textarea"
+                    id="form-stacked-text"
                     type="text"
                     rows="3"
-                    name="message"
-                    v-model="messageMsg"
-                    placeholder=" "
-                  />
-                  <label>Message (optional)</label>
+                    placeholder="Skriv ett meddelande"
+                  ></textarea>
                 </div>
-                <div
-                  v-if="errorTxt"
-                  class="uk-alert-danger"
-                  uk-alert
-                >
-                  <p>{{errorTxt}}</p>
-                </div>
-                <Recaptcha />
-                <button
-                  type="submit"
-                  class="uk-margin-top uk-button uk-button-secondary"
-                >Send</button>
-              </form>
-              <p
-                class="uk-text-large"
-                v-if="loadingTxt"
-              >Thank you, We'll be in touch soon!</p>
-            </div>
+              </div>
+              <div class="uk-margin">
+                <button class="uk-button uk-button-primary uk-button-large uk-border-pill">Skicka</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
   </fragment>
 </template>
 
 <script>
-import axios from 'axios';
 import allaVideos from "../shared/videos";
 
 export default {
@@ -559,52 +530,9 @@ export default {
   computed: {
   },
   data: () => ({
-    nameMsg: '',
-    emailMsg: '',
-    messageMsg: '',
-    loadingTxt: false,
-    errorTxt: "",
     videos: allaVideos,
   }),
   methods: {
-    sendEmail() {
-      if (!this.nameMsg) {
-        return this.errorTxt = "Please type your name"
-      }
-      if (!this.emailMsg) {
-        return this.errorTxt = "Please type your email"
-      }
-      // if (!this.getVerification) {
-      //   return this.errorTxt = "reCAPTCHA not done!"
-      // }
-      if (this.nameMsg && this.emailMsg) {
-        this.loadingTxt = true;
-      }
-      axios.post('https://formspree.io/XXXXXX', {
-        name: this.nameMsg,
-        from: this.emailMsg,
-        _subject: `${this.nameMsg} | Meddelande från karoon.se`,
-        message: this.messageMsg,
-        option: this.radioMsg
-      },
-      ).then(() => {
-        this.nameMsg = '';
-        this.emailMsg = '';
-        this.messageMsg = '';
-      }).catch((error) => {
-        if (error.response) {
-          this.errorText = error.response
-        }
-      });
-    },
-    checkEdge() {
-      if (window.navigator.userAgent.indexOf("Edge") > -1) return 1
-      return 0
-    },
-    checkMoz() {
-      if (window.navigator.userAgent.indexOf("Firefox") > 0) return 1
-      return 0
-    },
   }
 }
 </script>
