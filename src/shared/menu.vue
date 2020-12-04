@@ -32,9 +32,27 @@
               ></a>
           </div>
           <div class="uk-navbar-right mobileSocial uk-margin-right">
-            <a href=""><i class="fab fa-facebook-square"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-youtube"></i></a>
+            <a
+              href="https://facebook.com/karoonrice"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a
+              href="https://instagram.com/karoonrice"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCJalskm9MKT3oEcrpOaCfzQ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
           </div>
         </nav>
       </div>
@@ -199,9 +217,27 @@
             </div>
           </div>
           <div class="socialmediamenu">
-            <a href=""><i class="fab fa-facebook-square"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-youtube"></i></a>
+            <a
+              href="https://facebook.com/karoonrice"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a
+              href="https://instagram.com/karoonrice"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCJalskm9MKT3oEcrpOaCfzQ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
           </div>
         </div>
       </nav>

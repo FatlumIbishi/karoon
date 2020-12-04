@@ -24,19 +24,25 @@
                   <div>
                     <a
                       class="uk-icon"
-                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://facebook.com/karoonrice"
                     ><i class="fab fa-facebook-f" /></a>
                   </div>
                   <div>
                     <a
                       class="uk-icon"
-                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://instagram.com/karoonrice"
                     ><i class="fab fa-instagram" /></a>
                   </div>
                   <div>
                     <a
                       class="uk-icon"
-                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.youtube.com/channel/UCJalskm9MKT3oEcrpOaCfzQ"
                     ><i class="fab fa-youtube" /></a>
                   </div>
                 </div>

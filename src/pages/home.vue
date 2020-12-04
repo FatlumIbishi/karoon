@@ -143,7 +143,7 @@
             class="uk-child-width-1-1 uk-grid-margin uk-grid-stack"
             uk-grid
           >
-            <div class="uk-width-1-1@m uk-first-column uk-text-center">
+            <div class="uk-width-1-1@m uk-text-center">
               <h2 class="uk-h2 uk-text-center">Inpiration till din matlagning</h2>
               <router-link
                 class="uk-button uk-button-primary uk-button-large uk-border-pill uk-margin-medium-top"
@@ -259,7 +259,7 @@
                 class="uk-grid-large uk-child-width-1-1 uk-grid-margin-large uk-grid-stack"
                 uk-grid
               >
-                <div class="uk-width-1-1@m uk-first-column">
+                <div class="uk-width-1-1@m">
                   <div class="uk-margin">
                     <div
                       class="uk-child-width-1-1 uk-child-width-1-2@s uk-grid-large uk-grid-match"
@@ -421,13 +421,32 @@
                     class="uk-child-width-auto uk-grid-small uk-flex-bottom"
                     uk-grid
                   >
-                    <div class="uk-width-expand uk-first-column">
+                    <div class="uk-width-expand">
                       <div class="uk-margin-remove">
                         <i class="fas fa-map-marker-alt" /><span class="uk-margin-small-left">Vart</span>
                       </div>
                     </div>
                     <div>
-                      <div>Göteborg</div>
+                      Business Center Marieholm
+                    </div>
+                  </div>
+                  <div
+                    class="uk-child-width-auto uk-grid-small uk-flex-bottom uk-margin-remove-top"
+                    uk-grid
+                  >
+                    <div class="uk-width-expand"></div>
+                    <div>
+                      Marieholmsgatan 42
+
+                    </div>
+                  </div>
+                  <div
+                    class="uk-child-width-auto uk-grid-small uk-flex-bottom uk-margin-remove-top"
+                    uk-grid
+                  >
+                    <div class="uk-width-expand"></div>
+                    <div>
+                      402 52 Göteborg
                     </div>
                   </div>
                 </li>
@@ -436,7 +455,7 @@
                     class="uk-child-width-auto uk-grid-small uk-flex-bottom"
                     uk-grid
                   >
-                    <div class="uk-width-expand uk-first-column">
+                    <div class="uk-width-expand">
                       <div class="uk-margin-remove">
                         <i class="fas fa-mobile-alt" /><span class="uk-margin-small-left">Tel</span>
                       </div>
@@ -451,7 +470,7 @@
                     class="uk-child-width-auto uk-grid-small uk-flex-bottom"
                     uk-grid
                   >
-                    <div class="uk-width-expand uk-first-column">
+                    <div class="uk-width-expand">
                       <div class="uk-margin-remove">
                         <i class="far fa-envelope-open" /><span class="uk-margin-small-left">Mail</span>
                       </div>
