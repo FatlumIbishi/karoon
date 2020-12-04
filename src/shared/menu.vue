@@ -3,7 +3,7 @@
 
     <!-- MOBILE -->
     <div
-      class="tm-header-mobile uk-hidden@m"
+      class="uk-hidden@m"
       uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
     >
       <div class="uk-navbar-container">
@@ -11,7 +11,7 @@
           <div class="uk-navbar-left">
             <a
               class="uk-navbar-toggle"
-              href="#tm-mobile"
+              href="#karoon-mobile"
               uk-toggle
             >
               <div
@@ -31,13 +31,17 @@
                 class="logoImg"
               ></a>
           </div>
+          <div class="uk-navbar-right mobileSocial uk-margin-right">
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+          </div>
         </nav>
       </div>
 
       <div
-        id="tm-mobile"
+        id="karoon-mobile"
         uk-offcanvas
-        mode="push"
         overlay
       >
         <div class="uk-offcanvas-bar">
@@ -94,43 +98,6 @@
                 </ul>
               </div>
             </div>
-            <div class="uk-grid-margin uk-first-column">
-              <div class="uk-panel">
-                <ul
-                  class="uk-flex-inline uk-flex-middle uk-flex-nowrap uk-grid-medium uk-grid-stack"
-                  uk-grid
-                >
-                  <li>
-                    <a
-                      href="https://facebook.com/"
-                      class="uk-icon-link uk-icon"
-                    >
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://instagram.com/"
-                      class="uk-icon-link uk-icon"
-                    >
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://pinterest.com/"
-                      class="uk-icon-link uk-icon"
-                    >
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.youtube.com/channel/UCScfGdEgRCOh9YJdpGu82eQ"
-                      class="uk-icon-link uk-icon"
-                    >
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -139,6 +106,7 @@
     <!-- DESKTOP -->
     <div
       class="uk-visible@m"
+      :class="{'darktext': notHome}"
       uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light mainMenu; top: 80vh"
     >
       <nav class="uk-navbar-container">
@@ -147,19 +115,29 @@
             <div class="uk-navbar-center">
               <div class="uk-navbar-center-left">
                 <ul class="uk-navbar-nav">
-                  <li>
+                  <li v-if="notHome">
+                    <router-link
+                      uk-scroll
+                      :to="{name: 'Home', hash: '#produkter'}"
+                    >Produkter</router-link>
+                  </li>
+                  <li v-else>
                     <a
                       uk-scroll
                       href="#produkter"
                     >Produkter</a>
                   </li>
-                  <li>
+                  <li v-if="notHome">
+                    <router-link
+                      uk-scroll
+                      :to="{name: 'Home', hash: '#aterforsaljare'}"
+                    >Återförsäljare</router-link>
+                  </li>
+                  <li v-else>
                     <a
                       uk-scroll
                       href="#aterforsaljare"
-                    >
-                      Återförsäljare
-                    </a>
+                    >Återförsäljare</a>
                   </li>
                   <li>
                     <router-link to="/recept">Recept</router-link>
@@ -169,6 +147,7 @@
               <a
                 href="/"
                 class="uk-navbar-item uk-logo"
+                :class="{nothome: notHome}"
               >
                 <img
                   uk-svg
@@ -179,29 +158,41 @@
               </a>
               <div class="uk-navbar-center-right">
                 <ul class="uk-navbar-nav">
-                  <li>
+                  <li v-if="notHome">
+                    <router-link
+                      uk-scroll
+                      :to="{name: 'Home', hash: '#varderingar'}"
+                    >Värderingar</router-link>
+                  </li>
+                  <li v-else>
                     <a
                       uk-scroll
                       href="#varderingar"
-                    >
-                      Värderingar
-                    </a>
+                    >Värderingar</a>
                   </li>
-                  <li>
+                  <li v-if="notHome">
+                    <router-link
+                      uk-scroll
+                      :to="{name: 'Home', hash: '#egenskaper'}"
+                    >Egenskaper</router-link>
+                  </li>
+                  <li v-else>
                     <a
                       uk-scroll
                       href="#egenskaper"
-                    >
-                      Egenskaper
-                    </a>
+                    >Egenskaper</a>
                   </li>
-                  <li>
+                  <li v-if="notHome">
+                    <router-link
+                      uk-scroll
+                      :to="{name: 'Home', hash: '#kontakt'}"
+                    >Kontakt</router-link>
+                  </li>
+                  <li v-else>
                     <a
                       uk-scroll
                       href="#kontakt"
-                    >
-                      Kontakt
-                    </a>
+                    >Kontakt</a>
                   </li>
                 </ul>
               </div>
@@ -223,12 +214,25 @@
 export default {
   name: "Menu",
   data: () => ({
+    notHome: false,
   }),
   computed: {
   },
   components: {
   },
-  mounted() { },
+  mounted() {
+    if (this.$route.path !== "/") {
+      this.notHome = true;
+    }
+  },
+  watch: {
+    $route(to) {
+      if (to.path !== "/") {
+        return this.notHome = true;
+      }
+      this.notHome = false;
+    }
+  },
   methods: {
     hideMenu() {
       const element = this.$refs.dropDownMenu;

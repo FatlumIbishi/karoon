@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import homePage from "../pages/home";
+import allaReceptPage from "../pages/allarecept";
 import receptPage from "../pages/recept";
 
 Vue.use(Router);
@@ -16,6 +17,11 @@ export default new Router({
     },
     {
       path: "/recept",
+      name: "allarecept",
+      component: allaReceptPage,
+    },
+    {
+      path: "/recept/:recept",
       name: "recept",
       component: receptPage,
     },
@@ -29,10 +35,10 @@ export default new Router({
     if (to.hash) {
       return setTimeout(() => {
         if (window.innerWidth > 640) {
-          offset = -130;
+          offset = -80;
         }
         window.scrollTo({
-          top: document.querySelector(to.hash).offsetTop + (offset + -20),
+          top: document.querySelector(to.hash).offsetTop + (offset),
           behavior: "smooth",
         });
       }, 10);

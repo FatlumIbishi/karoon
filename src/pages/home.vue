@@ -1,5 +1,5 @@
 <template>
-  <fragment>
+  <div>
 
     <section class="uk-section-secondary uk-section uk-flex uk-flex-middle hero uk-light">
       <video
@@ -145,11 +145,12 @@
           >
             <div class="uk-width-1-1@m uk-first-column uk-text-center">
               <h2 class="uk-h2 uk-text-center">Inpiration till din matlagning</h2>
-              <a
+              <router-link
                 class="uk-button uk-button-primary uk-button-large uk-border-pill uk-margin-medium-top"
-                href="#"
+                to="/recept"
               >
-                Se recept</a>
+                Se recept
+              </router-link>
             </div>
           </div>
         </div>
@@ -176,8 +177,8 @@
               <div class="uk-margin-medium">
                 <a
                   class="uk-button uk-button-primary uk-button-large uk-border-pill"
-                  uk-scroll
-                  href="#aterforsaljare"
+                  href="#modal-naringsdeklaration"
+                  uk-toggle
                 >
                   Se näringsdeklaration
                 </a>
@@ -198,6 +199,44 @@
         </div>
       </div>
     </section>
+
+    <div
+      id="modal-naringsdeklaration"
+      uk-modal
+    >
+      <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title uk-text-center">Näringsdeklaration</h2>
+        <p class="uk-text-center">
+          Energideklaration per 100 g:
+        </p>
+        <div
+          class="uk-grid-collapse uk-width-medium uk-margin-auto"
+          uk-grid
+          v-for="(naring, index) in naringsdeklaration"
+          :key="index"
+        >
+          <div
+            class="uk-width-expand"
+            uk-leader="fill: ."
+          >
+            {{ naring.typ }}
+          </div>
+          <div>
+            {{ naring.varde}}
+          </div>
+        </div>
+        <p class="uk-text-center">Innehållet är noga kontrollerat av företaget J.S. Hamilton<br>
+          Karoon har ett lågt glykemiskt index(58) och är glutenfritt.</p>
+        <p class="uk-text-center">
+          <button
+            class="uk-button uk-button-default uk-modal-close"
+            type="button"
+          >
+            Stäng
+          </button>
+        </p>
+      </div>
+    </div>
 
     <section
       id="omoss"
@@ -517,7 +556,7 @@
       </div>
     </section>
 
-  </fragment>
+  </div>
 </template>
 
 <script>
@@ -533,6 +572,64 @@ export default {
   data: () => ({
     videos: allaVideos,
     receptImg: receptImg,
+    naringsdeklaration: [
+      {
+        typ: "Energivärde",
+        varde: "1253 kJ/359 kcal"
+      },
+      {
+        typ: "Fett",
+        varde: "1 g"
+      },
+      {
+        typ: "- varav mättat fett",
+        varde: "0,5 g"
+      },
+      {
+        typ: "Kolhydrater",
+        varde: "77,6 g"
+      },
+      {
+        typ: "- varav sockerarter",
+        varde: "0,3 g"
+      },
+      {
+        typ: "Protein",
+        varde: "8,7 g"
+      },
+      {
+        typ: "Salt",
+        varde: "0,04 g"
+      },
+      {
+        typ: "Kalcium",
+        varde: "2,82 mg"
+      },
+      {
+        typ: "Magnesium",
+        varde: "21,4 mg"
+      },
+      {
+        typ: "Kalium",
+        varde: "132 mg"
+      },
+      {
+        typ: "Järn",
+        varde: "0,63 mg"
+      },
+      {
+        typ: "Zink",
+        varde: "0,67 mg"
+      },
+      {
+        typ: "Selen",
+        varde: "0,068 mg"
+      },
+      {
+        typ: "Krom",
+        varde: "0,1 mg"
+      },
+    ]
   }),
   methods: {
   }

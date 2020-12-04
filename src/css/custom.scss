@@ -61,6 +61,15 @@ h4 {
 .uk-navbar-dropdown-nav,
 .uk-navbar-item,
 .uk-navbar-nav>li>a,
+.uk-nav-default,
+.uk-button,
+.uk-subnav>*> :first-child {
+  text-transform: capitalize;
+}
+
+.uk-navbar-dropdown-nav,
+.uk-navbar-item,
+.uk-navbar-nav>li>a,
 .uk-navbar-toggle,
 .uk-nav-default,
 .uk-button,
@@ -68,7 +77,6 @@ h4 {
 h5,
 .uk-subnav>*> :first-child {
   font-family: 'Manrope', sans-serif;
-  text-transform: capitalize;
 }
 
 /* Menu */
@@ -84,8 +92,16 @@ h5,
   object-fit: scale-down;
 }
 
-.uk-navbar-transparent .uk-navbar-item.uk-logo {
+.uk-navbar-transparent .uk-navbar-item.uk-logo:not(.nothome) {
   display: none;
+}
+
+.darktext a {
+  color: #000 !important;
+}
+
+.darktext a:hover {
+  color: var(--main) !important;
 }
 
 .socialmediamenu {
@@ -105,10 +121,18 @@ h5,
   padding-left: 10px;
 }
 
+.mobileSocial a {
+  font-size: 1.2em;
+}
+
+.mobileSocial a+* {
+  padding-left: 10px;
+}
+
 /* Hero */
 .mainMenu {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
 }
 
@@ -140,6 +164,10 @@ h5,
   background: linear-gradient(90deg, #FAE32D 0%, #E6B500 100%);
 }
 
+.overlaybg {
+  box-shadow:inset 0 0 0 2000px rgba(255, 255, 255, .8);
+}
+
 /* Button */
 .uk-button-primary {
   color: #000;
@@ -167,6 +195,8 @@ h5,
 }
 
 .noHero {
+  position: relative;
+  z-index: 1;
   height: 80px;
-  background-color: #000;
+  background-color: #fff;
 }

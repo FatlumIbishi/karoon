@@ -21,23 +21,23 @@
                   class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid socialMedia"
                   uk-grid
                 >
-                  <div class="uk-first-column">
+                  <div>
                     <a
                       class="uk-icon"
                       href=""
                     ><i class="fab fa-facebook-f" /></a>
-                  </div>
-                  <div class="uk-first-column">
-                    <a
-                      class="uk-icon"
-                      href=""
-                    ><i class="fab fa-linkedin-in" /></a>
                   </div>
                   <div>
                     <a
                       class="uk-icon"
                       href=""
                     ><i class="fab fa-instagram" /></a>
+                  </div>
+                  <div>
+                    <a
+                      class="uk-icon"
+                      href=""
+                    ><i class="fab fa-youtube" /></a>
                   </div>
                 </div>
               </div>
