@@ -99,7 +99,7 @@
             <div class="uk-card uk-card-default">
               <div class="uk-card-media-top uk-cover-container">
                 <img
-                  src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  src="../assets/miljo.jpg"
                   alt=""
                   uk-cover
                 >
@@ -116,7 +116,7 @@
             <div class="uk-card uk-card-default">
               <div class="uk-card-media-top uk-cover-container">
                 <img
-                  src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+                  src="../assets/kvalite.jpg"
                   alt=""
                   uk-cover
                 >
@@ -135,8 +135,8 @@
     <section class="uk-section-default">
       <div
         uk-img
-        class="uk-background-norepeat uk-background-cover uk-background-center-center uk-background-fixed uk-section uk-section-large uk-light uk-background-secondary"
-        style="background-image: url('https://images.pexels.com/photos/4033639/pexels-photo-4033639.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');"
+        class="uk-background-norepeat uk-background-cover uk-background-center-center uk-background-fixed uk-section uk-section-large uk-light uk-background-primary"
+        :style="`background-image: url(${receptImg});`"
       >
         <div class="uk-container uk-container-large">
           <div
@@ -190,7 +190,7 @@
                 <img
                   alt=""
                   uk-img
-                  src="https://image.shutterstock.com/z/stock-photo-green-peas-basmati-rice-or-matar-pulav-served-with-plain-dal-775904398.jpg"
+                  src="../assets/egenskaper.jpg"
                 >
               </div>
             </div>
@@ -276,8 +276,8 @@
     >
       <div class="uk-container uk-container-large">
         <h2 class="uk-h2 uk-text-center">Återförsäljare</h2>
-        <div class="uk-panel uk-text-center uk-margin-medium uk-margin-remove-top">
-          Vårt ris finns att köpa i de flesta asiatiska livsmedelsbutiker och orienthus i Göteborg, Helsingborg, Karlstad, Malmö, Mellerud, Vänersborg, Lysekil, Uddevalla och Stockholm.
+        <div class="uk-panel uk-text-center uk-margin-medium uk-margin-remove-top uk-text-large">
+          Vårt ris finns att köpa i de flesta asiatiska livsmedelsbutiker och orienthus i <strong>Göteborg, Helsingborg, Karlstad, Malmö, Mellerud, Vänersborg, Lysekil, Uddevalla och Stockholm.</strong>
         </div>
         <div class="uk-margin-medium">
           <div
@@ -369,7 +369,7 @@
 
     <section
       id="kontakt"
-      class="uk-section uk-section-large uk-section-default"
+      class="uk-section uk-section-large uk-section-default uk-padding-remove-bottom"
     >
       <div class="uk-container uk-container-large">
         <div uk-grid>
@@ -522,6 +522,7 @@
 
 <script>
 import allaVideos from "../shared/videos";
+import receptImg from "../assets/recept.jpg"
 
 export default {
   name: "Home",
@@ -531,6 +532,7 @@ export default {
   },
   data: () => ({
     videos: allaVideos,
+    receptImg: receptImg,
   }),
   methods: {
   }
