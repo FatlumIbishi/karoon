@@ -1,6 +1,6 @@
 {
   "name": "karoon",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --open",
@@ -8,18 +8,18 @@
   },
   "dependencies": {
     "axios": "^0.21.0",
-    "uikit": "^3.5.9",
+    "uikit": "^3.5.12",
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.8",
-    "@vue/cli-plugin-eslint": "^4.5.8",
-    "@vue/cli-service": "^4.5.8",
+    "@vue/cli-plugin-babel": "^4.5.9",
+    "@vue/cli-plugin-eslint": "^4.5.9",
+    "@vue/cli-service": "^4.5.9",
     "@vue/component-compiler-utils": "^3.2.0",
     "babel-eslint": "10.1.0",
     "compression-webpack-plugin": "^6.1.1",
-    "eslint": "^7.13.0",
-    "eslint-plugin-vue": "^7.1.0",
+    "eslint": "^7.15.0",
+    "eslint-plugin-vue": "^7.2.0",
     "prerender-spa-plugin": "^3.4.0",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
@@ -27,7 +27,7 @@
     "vue-fragment": "^1.5.1",
     "vue-hot-reload-api": "^2.3.4",
     "vue-router": "^3.4.9",
-    "vuex": "^3.5.1",
+    "vuex": "^3.6.0",
     "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
