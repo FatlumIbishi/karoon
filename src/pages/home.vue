@@ -461,7 +461,7 @@
                       </div>
                     </div>
                     <div>
-                      <a href="tel:">+46 707-07 07 07</a>
+                      <a href="tel:0317800200">+46 31-780 02 00</a><br>
                     </div>
                   </div>
                 </li>
@@ -484,7 +484,12 @@
             </div>
           </div>
           <div class="uk-width-2-3@m">
-            <form class="uk-form-stacked">
+            <form
+              v-if="!loadingTxt"
+              @submit.prevent="sendEmail"
+              method="POST"
+              class="uk-form-stacked"
+            >
               <div
                 uk-grid
                 class="uk-margin"
@@ -499,6 +504,7 @@
                       class="uk-input"
                       id="form-stacked-text"
                       name="name"
+                      v-model="nameMsg"
                       placeholder="Skriv in ditt namn"
                     >
                   </div>
@@ -513,6 +519,8 @@
                       class="uk-input"
                       id="form-stacked-text"
                       type="email"
+                      name="_replyto"
+                      v-model="emailMsg"
                       placeholder="Skriv in din mailadress"
                     >
                   </div>
@@ -532,6 +540,8 @@
                       class="uk-input"
                       id="form-stacked-text"
                       type="tel"
+                      name="phone"
+                      v-model="phoneMsg"
                       placeholder="Skriv ditt telefonnummer"
                     >
                   </div>
@@ -546,6 +556,8 @@
                       class="uk-input"
                       id="form-stacked-text"
                       type="text"
+                      name="company"
+                      v-model="companyMsg"
                       placeholder=" "
                     >
                   </div>
@@ -559,17 +571,34 @@
                 <div class="uk-form-controls">
                   <textarea
                     class="uk-textarea"
-                    id="form-stacked-text"
                     type="text"
                     rows="3"
+                    name="message"
+                    v-model="messageMsg"
                     placeholder="Skriv ett meddelande"
                   ></textarea>
                 </div>
               </div>
+              <div
+                v-if="errorTxt"
+                class="uk-alert-warning"
+                uk-alert
+              >
+                <p>{{ errorTxt }}</p>
+              </div>
               <div class="uk-margin">
-                <button class="uk-button uk-button-primary uk-button-large uk-border-pill">Skicka</button>
+                <button
+                  type="submit"
+                  class="uk-button uk-button-primary uk-button-large uk-border-pill"
+                >Skicka</button>
               </div>
             </form>
+            <p
+              v-if="loadingTxt"
+              class="uk-h4"
+            >
+              Tack för ert meddelande, vi hör av oss så fort vi kan.
+            </p>
           </div>
         </div>
       </div>
@@ -579,6 +608,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import allaVideos from "../shared/videos";
 import receptImg from "../assets/recept.jpg"
 
@@ -589,6 +619,14 @@ export default {
   computed: {
   },
   data: () => ({
+    code: "myybnkdd",
+    nameMsg: "",
+    emailMsg: "",
+    phoneMsg: "",
+    companyMsg: "",
+    messageMsg: "",
+    loadingTxt: false,
+    errorTxt: "",
     videos: allaVideos,
     receptImg: receptImg,
     naringsdeklaration: [
@@ -648,9 +686,44 @@ export default {
         typ: "Krom",
         varde: "0,1 mg"
       },
-    ]
+    ],
   }),
   methods: {
+    sendEmail() {
+      if (!this.nameMsg) {
+        return (this.errorTxt = "Vänligen skriv in ditt namn");
+      }
+      if (!this.emailMsg) {
+        return (this.errorTxt = "Vänligen skriv in din mailadress");
+      }
+      // if (!this.getVerification) {
+      //   return (this.errorTxt = "reCAPTCHA not done!");
+      // }
+      if (this.nameMsg && this.emailMsg) {
+        this.loadingTxt = true;
+      }
+      axios
+        .post(`https://formspree.io/f/${this.code}`, {
+          name: this.nameMsg,
+          from: this.emailMsg,
+          _subject: `${this.nameMsg} | Meddelande från Karoon.se`,
+          message: this.messageMsg,
+          phone: this.phoneMsg,
+          company: this.companyMsg,
+        })
+        .then(() => {
+          this.nameMsg = "";
+          this.emailMsg = "";
+          this.messageMsg = "";
+          this.phoneMsg = "";
+          this.companyMsg = "";
+        })
+        .catch((error) => {
+          if (error.response) {
+            this.errorText = error.response;
+          }
+        });
+    },
   }
 }
 </script>
