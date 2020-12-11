@@ -364,6 +364,84 @@
                 </div>
               </div>
             </div>
+            <div>
+              <div class="uk-card">
+                <div class="uk-card-media-top uk-text-center">
+                  <img
+                    src="../assets/nawras.png"
+                    alt=""
+                  >
+                </div>
+                <div class="uk-card-body uk-text-center">
+                  <h3 class="uk-card-title">Nawras</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card">
+                <div class="uk-card-media-top uk-text-center">
+                  <img
+                    src="../assets/simmo.png"
+                    alt=""
+                  >
+                </div>
+                <div class="uk-card-body uk-text-center">
+                  <h3 class="uk-card-title">Simmo World Food AB</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card">
+                <div class="uk-card-media-top uk-text-center">
+                  <img
+                    src="../assets/sedirfood.png"
+                    alt=""
+                  >
+                </div>
+                <div class="uk-card-body uk-text-center">
+                  <h3 class="uk-card-title">Sedir Food</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card">
+                <div class="uk-card-media-top uk-text-center">
+                  <img
+                    src="../assets/gladjegron.jpg"
+                    alt=""
+                  >
+                </div>
+                <div class="uk-card-body uk-text-center">
+                  <h3 class="uk-card-title">Glädje Grön</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card">
+                <div class="uk-card-media-top uk-text-center">
+                  <img
+                    src="../assets/balkanfood.jpg"
+                    alt=""
+                  >
+                </div>
+                <div class="uk-card-body uk-text-center">
+                  <h3 class="uk-card-title">Balkan Food</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card">
+                <div class="uk-card-media-top uk-text-center">
+                  <img
+                    src="../assets/nassim.jpg"
+                    alt=""
+                  >
+                </div>
+                <div class="uk-card-body uk-text-center">
+                  <h3 class="uk-card-title">Nassim</h3>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
