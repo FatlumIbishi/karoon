@@ -172,7 +172,7 @@
                 Risets Egenskaper
               </h2>
               <div class="uk-panel uk-margin-medium uk-margin-remove-top">
-                Karoon ris har en lätt, lufitg konsistens med en lite nötaktig smak. Den passar lika bra till att vara en del av en huvudrätt, som att vara en ingrediens i en sallad eller efterrätt.
+                Karoon ris har en lätt, luftig konsistens med en lite nötaktig smak. Den passar lika bra till att vara en del av en huvudrätt, som att vara en ingrediens i en sallad eller efterrätt.
               </div>
               <div class="uk-margin-medium">
                 <a
