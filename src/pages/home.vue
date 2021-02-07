@@ -75,7 +75,7 @@
       <div class="uk-container uk-container-large">
         <h2 class="uk-h2 uk-text-center">Våra värderingar</h2>
         <div class="uk-panel uk-text-center uk-margin-medium uk-margin-remove-top uk-text-large">
-          På våra tillverkningsanläggningar ser vi alltid till att våra medarbetare har en trygg, rättvis och jämställd arbetsmiljö. Målet är att våra värderingar respekteras i varje steg av produktionen. Odlarna vi samarbetar med får givetvis också rättvist betalt. 
+          På våra tillverkningsanläggningar ser vi alltid till att våra medarbetare har en trygg, rättvis och jämställd arbetsmiljö. Målet är att våra värderingar respekteras i varje steg av produktionen. Odlarna vi samarbetar med får givetvis också rättvist betalt.
         </div>
         <div
           class="uk-child-width-1-3@m uk-grid-match"
@@ -256,7 +256,7 @@
                 class="uk-h1 uk-margin-remove-top"
                 uk-scrollspy-class
               >
-                Om Karooon
+                Om Karoon
               </h2>
               <div
                 class="uk-grid-large uk-child-width-1-1 uk-grid-margin-large uk-grid-stack"
@@ -447,18 +447,24 @@
             </div>
           </div>
         </div>
-        <div class="uk-child-width-1-1 uk-width-1-2 uk-margin-auto uk-grid uk-grid-stack" uk-grid="">
+        <div
+          class="uk-child-width-1-1 uk-width-1-2 uk-margin-auto uk-grid uk-grid-stack"
+          uk-grid=""
+        >
           <div class="uk-width-1-1@m uk-first-column">
             <div class="uk-margin">
-              <div class="uk-child-width-1-1 uk-child-width-1-2@s uk-grid-match uk-grid" uk-grid="">
+              <div
+                class="uk-child-width-1-1 uk-child-width-1-2@s uk-grid-match uk-grid"
+                uk-grid=""
+              >
                 <div class="uk-first-column">
-                  <div class="uk-panel uk-margin-remove-first-child">  
+                  <div class="uk-panel uk-margin-remove-first-child">
                     <h2 class="uk-h4 uk-heading-bullet uk-margin-top uk-margin-remove-bottom">Vårt ris sälj idag till följande länder</h2>
                     <div class="uk-panel uk-margin-top">Turkiet, Storbritannien, Norge, Polen, Irak, Libanon, Kurdistan</div>
                   </div>
                 </div>
                 <div>
-                  <div class="uk-panel uk-margin-remove-first-child">    
+                  <div class="uk-panel uk-margin-remove-first-child">
                     <h2 class="uk-h4 uk-heading-bullet uk-margin-top uk-margin-remove-bottom">Vill du bli återförsäljare/ grossist?</h2>
                     <div class="uk-panel uk-margin-top">
                       Skicka förfrågan till <a href="mailto:info@karoon.se">info@karoon.se</a> eller
