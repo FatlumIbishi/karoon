@@ -330,6 +330,32 @@
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
                   <img
+                    src="../assets/stora-coop.png"
+                    alt=""
+                  >
+                </div>
+                <div class="uk-card-body uk-text-center">
+                  <h3 class="uk-card-title">Stora Coop</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card">
+                <div class="uk-card-media-top uk-text-center">
+                  <img
+                    src="../assets/oob.png"
+                    alt=""
+                  >
+                </div>
+                <div class="uk-card-body uk-text-center">
+                  <h3 class="uk-card-title">ÖoB</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card">
+                <div class="uk-card-media-top uk-text-center">
+                  <img
                     src="../assets/icakvantum.svg"
                     alt=""
                   >
