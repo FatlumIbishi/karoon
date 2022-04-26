@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import homePage from "../pages/home";
+import aktuelltPage from "../pages/aktuellt";
 import allaReceptPage from "../pages/allarecept";
 import receptPage from "../pages/recept";
 
@@ -14,6 +15,11 @@ export default new Router({
       path: "/",
       name: "Home",
       component: homePage,
+    },
+    {
+      path: "/aktuellt",
+      name: "aktuellt",
+      component: aktuelltPage,
     },
     {
       path: "/recept",

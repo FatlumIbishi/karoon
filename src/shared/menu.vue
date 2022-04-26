@@ -61,6 +61,7 @@
         id="karoon-mobile"
         uk-offcanvas
         overlay
+        ref="offCanvas"
       >
         <div class="uk-offcanvas-bar">
           <button
@@ -75,39 +76,107 @@
             <div class="uk-first-column">
               <div class="uk-panel">
                 <ul class="uk-nav uk-nav-default">
-                  <li>
-                    <a
+                  <li v-if="notHome">
+                    <router-link
                       uk-scroll
-                      href="#produkter"
-                    >Produkter</a>
+                      @click.native="hideMenu"
+                      :to="{name: 'Home', hash: '#produkter'}"
+                    >
+                      Produkter
+                    </router-link>
                   </li>
-                  <li>
+                  <li v-else>
                     <a
                       uk-scroll
+                      @click="hideMenu"
+                      href="#produkter"
+                    >
+                      Produkter
+                    </a>
+                  </li>
+                  <li v-if="notHome">
+                    <router-link
+                      uk-scroll
+                      @click.native="hideMenu"
+                      :to="{name: 'Home', hash: '#aterforsaljare'}"
+                    >
+                      Återförsäljare
+                    </router-link>
+                  </li>
+                  <li v-else>
+                    <a
+                      uk-scroll
+                      @click="hideMenu"
                       href="#aterforsaljare"
                     >
                       Återförsäljare
                     </a>
                   </li>
                   <li>
+                    <router-link
+                      @click.native="hideMenu"
+                      to="/recept"
+                    >
+                      Recept
+                    </router-link>
+                  </li>
+                  <li v-if="notHome">
+                    <router-link
+                      uk-scroll
+                      @click.native="hideMenu"
+                      :to="{name: 'Home', hash: '#varderingar'}"
+                    >
+                      Värderingar
+                    </router-link>
+                  </li>
+                  <li v-else>
                     <a
                       uk-scroll
+                      @click="hideMenu"
                       href="#varderingar"
                     >
                       Värderingar
                     </a>
                   </li>
                   <li>
+                    <router-link
+                      @click.native="hideMenu"
+                      to="/aktuellt"
+                    >
+                      Aktuellt
+                    </router-link>
+                  </li>
+                  <li v-if="notHome">
+                    <router-link
+                      uk-scroll
+                      @click.native="hideMenu"
+                      :to="{name: 'Home', hash: '#egenskaper'}"
+                    >
+                      Egenskaper
+                    </router-link>
+                  </li>
+                  <li v-else>
                     <a
                       uk-scroll
+                      @click="hideMenu"
                       href="#egenskaper"
                     >
                       Egenskaper
                     </a>
                   </li>
-                  <li>
+                  <li v-if="notHome">
+                    <router-link
+                      uk-scroll
+                      @click.native="hideMenu"
+                      :to="{name: 'Home', hash: '#kontakt'}"
+                    >
+                      Kontakt
+                    </router-link>
+                  </li>
+                  <li v-else>
                     <a
                       uk-scroll
+                      @click="hideMenu"
                       href="#kontakt"
                     >
                       Kontakt
@@ -137,28 +206,38 @@
                     <router-link
                       uk-scroll
                       :to="{name: 'Home', hash: '#produkter'}"
-                    >Produkter</router-link>
+                    >
+                      Produkter
+                    </router-link>
                   </li>
                   <li v-else>
                     <a
                       uk-scroll
                       href="#produkter"
-                    >Produkter</a>
+                    >
+                      Produkter
+                    </a>
                   </li>
                   <li v-if="notHome">
                     <router-link
                       uk-scroll
                       :to="{name: 'Home', hash: '#aterforsaljare'}"
-                    >Återförsäljare</router-link>
+                    >
+                      Återförsäljare
+                    </router-link>
                   </li>
                   <li v-else>
                     <a
                       uk-scroll
                       href="#aterforsaljare"
-                    >Återförsäljare</a>
+                    >
+                      Återförsäljare
+                    </a>
                   </li>
                   <li>
-                    <router-link to="/recept">Recept</router-link>
+                    <router-link to="/recept">
+                      Recept
+                    </router-link>
                   </li>
                 </ul>
               </div>
@@ -180,37 +259,52 @@
                     <router-link
                       uk-scroll
                       :to="{name: 'Home', hash: '#varderingar'}"
-                    >Värderingar</router-link>
+                    >
+                      Värderingar
+                    </router-link>
                   </li>
                   <li v-else>
                     <a
                       uk-scroll
                       href="#varderingar"
-                    >Värderingar</a>
+                    >
+                      Värderingar
+                    </a>
+                  </li>
+                  <li>
+                    <router-link to="/aktuellt">Aktuellt</router-link>
                   </li>
                   <li v-if="notHome">
                     <router-link
                       uk-scroll
                       :to="{name: 'Home', hash: '#egenskaper'}"
-                    >Egenskaper</router-link>
+                    >
+                      Egenskaper
+                    </router-link>
                   </li>
                   <li v-else>
                     <a
                       uk-scroll
                       href="#egenskaper"
-                    >Egenskaper</a>
+                    >
+                      Egenskaper
+                    </a>
                   </li>
                   <li v-if="notHome">
                     <router-link
                       uk-scroll
                       :to="{name: 'Home', hash: '#kontakt'}"
-                    >Kontakt</router-link>
+                    >
+                      Kontakt
+                    </router-link>
                   </li>
                   <li v-else>
                     <a
                       uk-scroll
                       href="#kontakt"
-                    >Kontakt</a>
+                    >
+                      Kontakt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -271,9 +365,9 @@ export default {
   },
   methods: {
     hideMenu() {
-      const element = this.$refs.dropDownMenu;
+      const element = this.$refs.offCanvas;
       // eslint-disable-next-line no-undef
-      UIkit.drop(element).hide();
+      UIkit.offcanvas(element).hide();
     },
   },
 }
