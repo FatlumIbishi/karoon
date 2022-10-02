@@ -557,7 +557,7 @@
                       </div>
                     </div>
                     <div>
-                      Business Center Marieholm
+                      Lärjeågatan 7
                     </div>
                   </div>
                   <div
@@ -566,7 +566,7 @@
                   >
                     <div class="uk-width-expand"></div>
                     <div>
-                      Marieholmsgatan 42
+                      415 25 Göteborg
                     </div>
                   </div>
                   <div
@@ -575,7 +575,7 @@
                   >
                     <div class="uk-width-expand"></div>
                     <div>
-                      402 52 Göteborg
+                      Sweden
                     </div>
                   </div>
                 </li>
