@@ -55,7 +55,12 @@
           <div class="uk-grid-item-match uk-flex-middle uk-width-2-3@m">
             <div class="uk-panel uk-width-1-1">
               <div class="uk-margin">
-                <img alt="" uk-img src="../assets/produkter.png" />
+                <img
+                  alt="Karoon Basmatiris Produkter"
+                  loading="lazy"
+                  uk-img
+                  src="../assets/produkter.png"
+                />
               </div>
             </div>
           </div>
@@ -84,7 +89,8 @@
                 <img
                   class="rattvistImg"
                   src="../assets/varderingar.jpg"
-                  alt=""
+                  alt="Karoon Basmatiris Värderingar"
+                  loading="lazy"
                   uk-cover
                 />
                 <canvas height="300"></canvas>
@@ -104,7 +110,12 @@
           <div>
             <div class="uk-card uk-card-default">
               <div class="uk-card-media-top uk-cover-container">
-                <img src="../assets/miljo.jpg" alt="" uk-cover />
+                <img
+                  src="../assets/miljo.jpg"
+                  alt="Karoon Basmatiris Miljö"
+                  loading="lazy"
+                  uk-cover
+                />
                 <canvas height="300"></canvas>
               </div>
               <div class="uk-card-body">
@@ -121,7 +132,12 @@
           <div>
             <div class="uk-card uk-card-default">
               <div class="uk-card-media-top uk-cover-container">
-                <img src="../assets/kvalite.jpg" alt="" uk-cover />
+                <img
+                  src="../assets/kvalite.jpg"
+                  alt="Karoon Basmatiris Kvalité"
+                  loading="lazy"
+                  uk-cover
+                />
                 <canvas height="300"></canvas>
               </div>
               <div class="uk-card-body">
@@ -195,7 +211,12 @@
           <div class="uk-grid-item-match uk-flex-middle uk-width-1-2@m">
             <div class="uk-panel uk-width-1-1">
               <div class="uk-margin">
-                <img alt="" uk-img src="../assets/egenskaper.jpg" />
+                <img
+                  alt="Karoon Basmatiris Egenskaper"
+                  loading="lazy"
+                  uk-img
+                  src="../assets/egenskaper.jpg"
+                />
               </div>
             </div>
           </div>
@@ -313,7 +334,12 @@
                 class="uk-margin uk-scrollspy-inview uk-animation-slide-right-medium"
                 uk-scrollspy-class
               >
-                <img alt="" uk-img src="../assets/omoss.jpg" />
+                <img
+                  alt="Om Karoon Basmatiris"
+                  loading="lazy"
+                  uk-img
+                  src="../assets/omoss.jpg"
+                />
               </div>
             </div>
           </div>
@@ -342,7 +368,11 @@
             <div>
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
-                  <img src="../assets/stora-coop.png" alt="" />
+                  <img
+                    src="../assets/stora-coop.png"
+                    alt="Stora Coop Logo"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="uk-card-body uk-text-center">
                   <h3 class="uk-card-title">Stora Coop</h3>
@@ -352,7 +382,7 @@
             <div>
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
-                  <img src="../assets/oob.png" alt="" />
+                  <img src="../assets/oob.png" alt="ÖoB Logo" loading="lazy" />
                 </div>
                 <div class="uk-card-body uk-text-center">
                   <h3 class="uk-card-title">ÖoB</h3>
@@ -362,7 +392,11 @@
             <div>
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
-                  <img src="../assets/icakvantum.svg" alt="" />
+                  <img
+                    src="../assets/icakvantum.svg"
+                    alt="ICA Kvantum Logo"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="uk-card-body uk-text-center">
                   <h3 class="uk-card-title">ICA Kvantum</h3>
@@ -373,7 +407,11 @@
             <div>
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
-                  <img src="../assets/icanara.svg" alt="" />
+                  <img
+                    src="../assets/icanara.svg"
+                    alt="ICA Nära Logo"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="uk-card-body uk-text-center">
                   <h3 class="uk-card-title">ICA Nära</h3>
@@ -384,7 +422,11 @@
             <div>
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
-                  <img src="../assets/orienthus.png" alt="" />
+                  <img
+                    src="../assets/orienthus.png"
+                    alt="Göteborgs Orienthus Logo"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="uk-card-body uk-text-center">
                   <h3 class="uk-card-title">Göteborgs Orienthus</h3>
@@ -394,7 +436,11 @@
             <div>
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
-                  <img src="../assets/nawras.png" alt="" />
+                  <img
+                    src="../assets/nawras.png"
+                    alt="Nawras Logo"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="uk-card-body uk-text-center">
                   <h3 class="uk-card-title">Nawras</h3>
@@ -404,7 +450,11 @@
             <div>
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
-                  <img src="../assets/simmo.png" alt="" />
+                  <img
+                    src="../assets/simmo.png"
+                    alt="Simmo World Food AB Logo"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="uk-card-body uk-text-center">
                   <h3 class="uk-card-title">Simmo World Food AB</h3>
@@ -414,7 +464,11 @@
             <div>
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
-                  <img src="../assets/gladjegron.jpg" alt="" />
+                  <img
+                    src="../assets/gladjegron.jpg"
+                    alt="Glädje Grön Logo"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="uk-card-body uk-text-center">
                   <h3 class="uk-card-title">Glädje Grön</h3>
@@ -424,7 +478,11 @@
             <div>
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
-                  <img src="../assets/balkanfood.jpg" alt="" />
+                  <img
+                    src="../assets/balkanfood.jpg"
+                    alt="Balkan Food Logo"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="uk-card-body uk-text-center">
                   <h3 class="uk-card-title">Balkan Food</h3>
@@ -434,7 +492,11 @@
             <div>
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
-                  <img src="../assets/nassim.jpg" alt="" />
+                  <img
+                    src="../assets/nassim.jpg"
+                    alt="Nassim Logo"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="uk-card-body uk-text-center">
                   <h3 class="uk-card-title">Nassim</h3>
@@ -444,7 +506,11 @@
             <div>
               <div class="uk-card">
                 <div class="uk-card-media-top uk-text-center">
-                  <img src="../assets/lebsan.svg" alt="" />
+                  <img
+                    src="../assets/lebsan.svg"
+                    alt="Lebsan Food AB Logo"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="uk-card-body uk-text-center">
                   <h3 class="uk-card-title">Lebsan Food AB</h3>

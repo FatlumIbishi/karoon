@@ -1,29 +1,28 @@
 <template>
   <fragment v-if="selectedProduct">
-
     <section class="noHero" />
 
     <section class="uk-section-default uk-section">
       <div class="uk-position-relative">
         <div class="uk-margin-medium uk-container">
-          <div
-            class="uk-grid-large uk-grid"
-            uk-grid
-          >
+          <div class="uk-grid-large uk-grid" uk-grid>
             <div class="uk-width-1-2@s uk-first-column">
-              <div class="uk-position-relative uk-margin uk-text-left uk-position-z-index">
-                <img
-                  :src="selectedProduct.bild"
-                  alt=""
-                >
+              <div
+                class="uk-position-relative uk-margin uk-text-left uk-position-z-index"
+              >
+                <img :src="selectedProduct.bild" :alt="selectedProduct.namn" />
               </div>
             </div>
             <div class="uk-grid-item-match uk-flex-middle uk-width-1-2@s">
               <div class="uk-panel uk-width-1-1">
-                <h1 class="uk-position-relative uk-margin uk-width-large uk-text-left">
+                <h1
+                  class="uk-position-relative uk-margin uk-width-large uk-text-left"
+                >
                   {{ selectedProduct.namn }}
                 </h1>
-                <div class="uk-panel uk-text-lead uk-position-relative uk-margin uk-width-large@m uk-text-left">
+                <div
+                  class="uk-panel uk-text-lead uk-position-relative uk-margin uk-width-large@m uk-text-left"
+                >
                   <p>
                     {{ selectedProduct.desc }}
                   </p>
@@ -49,12 +48,14 @@
                                 class="uk-text-secondary"
                                 alt=""
                                 uk-svg
-                              >
+                              />
                             </div>
                           </div>
                           <div class="uk-margin-remove-first-child">
                             <div class="uk-text-meta">Tid</div>
-                            <div class="uk-h6 uk-text-emphasis uk-margin-remove-top uk-margin-remove-bottom">
+                            <div
+                              class="uk-h6 uk-text-emphasis uk-margin-remove-top uk-margin-remove-bottom"
+                            >
                               {{ selectedProduct.tid }}
                             </div>
                           </div>
@@ -71,7 +72,9 @@
           class="uk-visible@m uk-child-width-1-1 uk-grid-margin uk-grid-stack"
           uk-grid
         >
-          <div class="uk-grid-item-match uk-width-1-1@m uk-visible@m uk-first-column">
+          <div
+            class="uk-grid-item-match uk-width-1-1@m uk-visible@m uk-first-column"
+          >
             <div class="uk-panel uk-width-1-1">
               <div
                 class="uk-visible@m uk-position-absolute uk-width-1-1"
@@ -81,7 +84,7 @@
                   src="https://demo.yootheme.com/wordpress/themes/kitchen-daily/wp-admin/admin-ajax.php?p=theme%2Fimage&src=WyIuLlwvZGVtb1wva2l0Y2hlbi1kYWlseVwvaW1hZ2VzXC9yZWNpcGVzLWhlcm8ucG5nIixbWyJkb1Jlc2l6ZSIsWzc2OCwxMjE1LDc2OCwxMjE1XV0sWyJkb0Nyb3AiLFs3NjgsMTIxNSwwLDBdXV1d&hash=a8a5e289a7f4c5b22a54d8961b1d13e4&action=kernel"
                   alt=""
                   target="!*"
-                >
+                />
               </div>
             </div>
           </div>
@@ -91,10 +94,7 @@
 
     <section class="uk-section-muted uk-section uk-section-large">
       <div class="uk-margin-xlarge uk-container">
-        <div
-          class="uk-grid-column-large uk-grid"
-          uk-grid
-        >
+        <div class="uk-grid-column-large uk-grid" uk-grid>
           <div class="uk-width-1-3@m">
             <h2 class="uk-h4">
               Ingredienser
@@ -104,12 +104,11 @@
                 v-for="(ing, index) in selectedProduct.ingredienser"
                 :key="index"
               >
-                <div
-                  class="uk-child-width-expand uk-grid-column-small"
-                  uk-grid
-                >
+                <div class="uk-child-width-expand uk-grid-column-small" uk-grid>
                   <div class="uk-width-small uk-text-break uk-first-column">
-                    <div class="uk-margin-remove uk-text-bold">{{ ing.matt }}</div>
+                    <div class="uk-margin-remove uk-text-bold">
+                      {{ ing.matt }}
+                    </div>
                   </div>
                   <div>
                     <div class="uk-panel">{{ ing.ingrediens }}</div>
@@ -148,15 +147,16 @@
             </ul> -->
           </div>
 
-          <div class="uk-width-2-3@m uk-flex-first@m uk-first-column uk-position-z-index">
+          <div
+            class="uk-width-2-3@m uk-flex-first@m uk-first-column uk-position-z-index"
+          >
             <h2 class="uk-h4">
               Gör så här
             </h2>
-            <ol class="uk-list uk-list-decimal uk-list-secondary uk-list-large uk-width-2xlarge@m">
-              <li
-                v-for="(m, index) in selectedProduct.metod"
-                :key="index"
-              >
+            <ol
+              class="uk-list uk-list-decimal uk-list-secondary uk-list-large uk-width-2xlarge@m"
+            >
+              <li v-for="(m, index) in selectedProduct.metod" :key="index">
                 <div class="uk-panel">
                   <p>{{ m }}</p>
                 </div>
@@ -174,19 +174,16 @@
         </div>
       </div>
     </section>
-
   </fragment>
 </template>
 
 <script>
-import allProducts from "../shared/recept"
+import allProducts from "../shared/recept";
 
 export default {
   name: "Recept",
-  components: {
-  },
-  computed: {
-  },
+  components: {},
+  computed: {},
   data: () => ({
     selectedProduct: null,
   }),
@@ -194,28 +191,28 @@ export default {
     fetchProduct(urlCode) {
       var count = 0;
       for (let i = 0; i < allProducts.length; i++) {
-        count++
-        if (allProducts[ i ].sn === urlCode) {
-          return this.selectedProduct = allProducts[ i ];
+        count++;
+        if (allProducts[i].sn === urlCode) {
+          return (this.selectedProduct = allProducts[i]);
         }
         if (count === allProducts.length) {
-          this.empty()
+          this.empty();
         }
       }
     },
     empty() {
-      this.$router.push('/')
-    }
+      this.$router.push("/");
+    },
   },
   mounted() {
     setTimeout(() => {
-      console.log(this.selectedProduct)
-    }, 500)
+      console.log(this.selectedProduct);
+    }, 500);
   },
   created() {
     setTimeout(() => {
-      this.fetchProduct(this.$route.params.recept.toLowerCase())
-    }, 100)
+      this.fetchProduct(this.$route.params.recept.toLowerCase());
+    }, 100);
   },
-}
+};
 </script>

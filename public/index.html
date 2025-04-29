@@ -1,95 +1,94 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <title>Karoon</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Långkornigt basmatiris" />
-    <meta name="keywords" content="" />
-    <meta property="og:title" content="Karoon" />
-    <meta property="og:description" content="Långkornigt basmatiris" />
-    <meta property="og:image" content="https://karoon.se/images/metaimg.jpg" />
-    <meta property="og:url" content="https://karoon.se" />
-    <meta property="og:type" content="website" />
-    <link rel="canonical" href="https://karoon.se" />
-    <base href="/" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/favicon.png"
-      sizes="32x32"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css"
-    />
 
-    <!-- Start Single Page Apps for GitHub Pages -->
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // https://github.com/rafrex/spa-github-pages
-      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
-      // ----------------------------------------------------------------------
-      // This script checks to see if a redirect is present in the query string
-      // and converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      (function(l) {
-        if (l.search) {
-          var q = {};
-          l.search
-            .slice(1)
-            .split("&")
-            .forEach(function(v) {
-              var a = v.split("=");
-              q[a[0]] = a
-                .slice(1)
-                .join("=")
-                .replace(/~and~/g, "&");
-            });
-          if (q.p !== undefined) {
-            window.history.replaceState(
-              null,
-              null,
-              l.pathname.slice(0, -1) +
-                (q.p || "") +
-                (q.q ? "?" + q.q : "") +
-                l.hash
-            );
-          }
+<head>
+  <title>Karoon - Långkornigt Basmatiris</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Karoon erbjuder högkvalitativt långkornigt basmatiris för alla dina matlagningsbehov." />
+  <meta name="keywords" content="basmati, basmatiris, långkornigt ris, högkvalitativt ris, Karoon" />
+  <meta property="og:title" content="Karoon - Långkornigt Basmatiris" />
+  <meta property="og:description"
+    content="Karoon erbjuder högkvalitativt långkornigt basmatiris för alla dina matlagningsbehov." />
+  <meta property="og:image" content="https://karoon.se/images/metaimg.jpg" />
+  <meta property="og:url" content="https://karoon.se" />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://karoon.se" />
+  <link rel="icon" type="image/png" href="./images/favicon.png" sizes="32x32" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Karoon Basmati Ris",
+      "url": "https://karoon.se",
+      "logo": "https://karoon.se/images/metaimg.jpg",
+      "description": "Karoon erbjuder högkvalitativt långkornigt basmatiris för alla dina matlagningsbehov.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Karoon"
+      },
+      "sameAs": [
+        "https://www.facebook.com/karoonrice",
+        "https://www.instagram.com/karoonrice"
+      ]
+    }
+  </script>
+
+  <!-- Start Single Page Apps for GitHub Pages -->
+  <script type="text/javascript">
+    (function (l) {
+      if (l.search) {
+        var q = {};
+        l.search
+          .slice(1)
+          .split("&")
+          .forEach(function (v) {
+            var a = v.split("=");
+            q[a[0]] = a
+              .slice(1)
+              .join("=")
+              .replace(/~and~/g, "&");
+          });
+        if (q.p !== undefined) {
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) +
+            (q.p || "") +
+            (q.q ? "?" + q.q : "") +
+            l.hash
+          );
         }
-      })(window.location);
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-178007969-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
       }
-      gtag("js", new Date());
+    })(window.location);
+  </script>
+  <!-- End Single Page Apps for GitHub Pages -->
 
-      gtag("config", "UA-178007969-1");
-    </script>
-    <script
-      src="https://www.google.com/recaptcha/api.js?render=explicit"
-      async
-    ></script>
-  </head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178007969-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  <body>
-    <div id="app"></div>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/js/all.min.js"></script>
-  </body>
+    gtag("config", "UA-178007969-1");
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?render=explicit" async></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/js/all.min.js"></script>
+</body>
+
 </html>

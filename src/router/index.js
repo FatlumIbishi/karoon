@@ -44,7 +44,7 @@ export default new Router({
           offset = -80;
         }
         window.scrollTo({
-          top: document.querySelector(to.hash).offsetTop + (offset),
+          top: document.querySelector(to.hash).offsetTop + offset,
           behavior: "smooth",
         });
       }, 10);
