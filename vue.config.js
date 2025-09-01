@@ -1,17 +1,16 @@
 const path = require("path");
-const PrerenderSpaPlugin = require("prerender-spa-plugin");
+const PrerendererWebpackPlugin = require("@prerenderer/webpack-plugin");
+const PuppeteerRenderer = require("@prerenderer/renderer-puppeteer");
 const CompressionPlugin = require("compression-webpack-plugin");
 
 const productionPlugins = [
-  new PrerenderSpaPlugin({
+  new PrerendererWebpackPlugin({
     staticDir: path.join(__dirname, "docs"),
     routes: ["/"],
-    renderer: new PrerenderSpaPlugin.PuppeteerRenderer({
-      inject: {},
-      headless: true,
-      renderAfterDocumentEvent: "render-event",
-    }),
-  }),
+    renderer: new PuppeteerRenderer({
+      renderAfterDocumentEvent: "render-event"
+    })
+  })
 ];
 
 module.exports = {
@@ -19,8 +18,8 @@ module.exports = {
   outputDir: "docs",
   pluginOptions: {
     webpackBundleAnalyzer: {
-      openAnalyzer: false,
-    },
+      openAnalyzer: false
+    }
   },
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === "production") {
@@ -30,5 +29,5 @@ module.exports = {
   chainWebpack(config) {
     config.plugins.delete("prefetch");
     config.plugin("CompressionPlugin").use(CompressionPlugin);
-  },
+  }
 };
