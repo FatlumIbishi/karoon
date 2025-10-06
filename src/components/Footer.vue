@@ -1,7 +1,7 @@
 <!-- components/Footer.vue -->
 <template>
   <footer
-    class="mt-auto border-t md:border-t-0 border-gray-200 dark:border-neutral-700 mb-14"
+    class="mt-auto border-t md:border-t-0 border-gray-200 dark:border-neutral-700"
   >
     <div class="w-full max-w-7xl py-10 md:pt-0 px-4 sm:px-6 lg:px-8 mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-5">
