@@ -1,11 +1,11 @@
-import Index from '@/pages/index.vue';
-import About from '@/pages/about.vue';
-import NotFound from '@/pages/not-found.vue';
+import Index from "@/pages/Main.vue";
+import NotFound from "@/pages/NotFound.vue";
+import RecipeDetail from "@/pages/RecipeDetail.vue";
 
 export const routes = [
-  { path: '/', component: Index },
-  { path: '/about', component: About },
-  { path: '/:path(.*)', component: NotFound },
+  { path: "/", component: Index },
+  { path: "/recept/:slug", component: RecipeDetail },
+  { path: "/:path(.*)", component: NotFound },
 ];
 
 export default routes;

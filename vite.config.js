@@ -1,12 +1,12 @@
-import { defineConfig, loadEnv } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import svgLoader from 'vite-svg-loader'
-import autoImport from 'unplugin-auto-import/vite'
-import tailwindcss from '@tailwindcss/vite'
-import { resolve } from 'path'
+import { defineConfig, loadEnv } from "vite";
+import vue from "@vitejs/plugin-vue";
+import svgLoader from "vite-svg-loader";
+import autoImport from "unplugin-auto-import/vite";
+import tailwindcss from "@tailwindcss/vite";
+import { resolve } from "path";
 
 export default ({ mode }) => {
-  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) }
+  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
   return defineConfig({
     base: process.env.VITE_BASE_PUBLIC_PATH,
@@ -15,20 +15,17 @@ export default ({ mode }) => {
       vue(),
       tailwindcss(),
       autoImport({
-        imports: [
-          'vue',
-          'vue-router',
-        ],
-        dirs: [
-          './src/components',
-          './src/composables',
-        ],
+        imports: ["vue", "vue-router"],
+        dirs: ["./src/components", "./src/composables"],
       }),
     ],
     resolve: {
       alias: {
-        '@': resolve(__dirname, 'src'),
+        "@": resolve(__dirname, "src"),
       },
     },
-  })
-}
+    server: {
+      historyApiFallback: true,
+    },
+  });
+};

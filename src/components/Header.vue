@@ -11,7 +11,7 @@
         <a
           class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-hidden focus:opacity-80"
           href="/"
-          aria-label="Preline"
+          aria-label="Karoon"
         >
           <svg
             class="w-42 h-auto"

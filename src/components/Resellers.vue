@@ -1,6 +1,6 @@
 <!-- components/Resellers.vue -->
 <template>
-  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <div class="max-w-[85rem] py-10 lg:py-14 mx-auto overflow-hidden">
     <!-- Title -->
     <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
       <h2
@@ -13,57 +13,40 @@
       </p>
     </div>
 
-    <!-- Logos -->
+    <!-- Marquee -->
     <div
-      class="my-8 md:my-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-x-12 lg:gap-x-16 items-center"
+      class="relative w-full overflow-hidden group cursor-default select-none"
     >
-      <a href="https://www.coop.se/" target="_blank">
-        <img
-          src="/img/aterforsaljare/stora-coop.png"
-          alt="Stora Coop"
-          class="w-40 h-12 md:h-14 mx-auto object-contain opacity-80 hover:opacity-100"
-        />
-      </a>
-      <a href="https://www.oob.se/" target="_blank">
-        <img
-          src="/img/aterforsaljare/oob.png"
-          alt="ÖoB"
-          class="w-40 h-12 md:h-14 mx-auto object-contain opacity-80 hover:opacity-100"
-        />
-      </a>
-      <a href="https://www.ica.se/butiker/kvantum/" target="_blank">
-        <img
-          src="/img/aterforsaljare/icakvantum.svg"
-          alt="ICA Kvantum"
-          class="w-40 h-12 md:h-14 mx-auto object-contain opacity-80 hover:opacity-100"
-        />
-      </a>
-      <a href="https://www.ica.se/butiker/nara/" target="_blank">
-        <img
-          src="/img/aterforsaljare/icanara.svg"
-          alt="ICA Nära"
-          class="w-40 h-12 md:h-14 mx-auto object-contain opacity-80 hover:opacity-100"
-        />
-      </a>
-      <a href="https://goteborgsorienthus.se/" target="_blank">
-        <img
-          src="/img/aterforsaljare/orienthus.png"
-          alt="Göteborgs Orienthus"
-          class="w-40 h-12 md:h-14 mx-auto object-contain opacity-80 hover:opacity-100"
-        />
-      </a>
+      <div
+        class="flex items-center gap-12 animate-marquee group-hover:[animation-play-state:paused]"
+        :style="{ '--marquee-duration': `${logos.length * 3}s` }"
+      >
+        <template v-for="(logo, index) in doubledLogos" :key="index">
+          <a
+            :href="logo.link"
+            target="_blank"
+            class="flex-shrink-0 opacity-80 hover:opacity-100 transition-opacity"
+          >
+            <img
+              :src="logo.src"
+              :alt="logo.alt"
+              class="h-12 md:h-14 w-40 object-contain"
+            />
+          </a>
+        </template>
+      </div>
     </div>
 
     <!-- Counters -->
     <div
-      class="mt-4 md:mt-10 grid grid-cols-12 sm:flex sm:justify-center gap-6 sm:gap-x-12 lg:gap-x-20"
+      class="mt-10 grid grid-cols-12 sm:flex sm:justify-center gap-6 sm:gap-x-12 lg:gap-x-20"
     >
       <div class="col-span-6 text-center">
         <h4
-          id="count-250"
+          ref="elStores"
           class="text-3xl md:text-5xl font-semibold text-gray-800 dark:text-neutral-200"
         >
-          {{ useCountUp(250) }}+
+          {{ countStores }}+
         </h4>
         <p class="text-sm md:text-base text-gray-600 dark:text-neutral-400">
           Butiker i Sverige
@@ -71,10 +54,10 @@
       </div>
       <div class="col-span-6 text-center">
         <h4
-          id="count-10"
+          ref="elWholesalers"
           class="text-3xl md:text-5xl font-semibold text-gray-800 dark:text-neutral-200"
         >
-          {{ useCountUp(10) }}+
+          {{ countWholesalers }}+
         </h4>
         <p class="text-sm md:text-base text-gray-600 dark:text-neutral-400">
           Grossister
@@ -82,10 +65,10 @@
       </div>
       <div class="col-span-12 sm:col-auto text-center">
         <h4
-          id="count-3"
+          ref="elCountries"
           class="text-3xl md:text-5xl font-semibold text-gray-800 dark:text-neutral-200"
         >
-          {{ useCountUp(3) }}
+          {{ countCountries }}
         </h4>
         <p class="text-sm md:text-base text-gray-600 dark:text-neutral-400">
           Länder
@@ -96,17 +79,46 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 
-function useCountUp(target, duration = 1200) {
+// 🔁 LOGO DATA
+const logos = [
+  {
+    src: "/img/aterforsaljare/stora-coop.png",
+    alt: "Stora Coop",
+    link: "https://www.coop.se/",
+  },
+  {
+    src: "/img/aterforsaljare/oob.png",
+    alt: "ÖoB",
+    link: "https://www.oob.se/",
+  },
+  {
+    src: "/img/aterforsaljare/icakvantum.svg",
+    alt: "ICA Kvantum",
+    link: "https://www.ica.se/butiker/kvantum/",
+  },
+  {
+    src: "/img/aterforsaljare/icanara.svg",
+    alt: "ICA Nära",
+    link: "https://www.ica.se/butiker/nara/",
+  },
+  {
+    src: "/img/aterforsaljare/orienthus.png",
+    alt: "Göteborgs Orienthus",
+    link: "https://goteborgsorienthus.se/",
+  },
+];
+
+// Dubblar listan så den loopar sömlöst
+const doubledLogos = computed(() => [...logos, ...logos]);
+
+// 🔢 COUNT-UP FUNCTION
+function useCountUp(target, elRef, duration = 1200) {
   const value = ref(0);
-  let started = false;
 
   const start = () => {
-    if (started) return;
-    started = true;
     const startTime = performance.now();
-
     const tick = (now) => {
       const progress = Math.min((now - startTime) / duration, 1);
       value.value = Math.floor(progress * target);
@@ -127,9 +139,42 @@ function useCountUp(target, duration = 1200) {
       },
       { threshold: 0.4 }
     );
-    observer.observe(document.querySelector(`#count-${target}`));
+    if (elRef.value) observer.observe(elRef.value);
   });
 
   return value;
 }
+
+// refs till elementen
+const elStores = ref(null);
+const elWholesalers = ref(null);
+const elCountries = ref(null);
+
+// använd hooken
+const countStores = useCountUp(250, elStores);
+const countWholesalers = useCountUp(10, elWholesalers);
+const countCountries = useCountUp(7, elCountries);
 </script>
+
+<style scoped>
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 30s) linear infinite;
+  width: max-content;
+  will-change: transform;
+}
+
+/* paus på hover/touch (för extra säkerhet) */
+.group:hover .animate-marquee,
+.group:active .animate-marquee {
+  animation-play-state: paused !important;
+}
+</style>

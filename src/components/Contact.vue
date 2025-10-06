@@ -3,11 +3,11 @@
   <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
     <div class="max-w-2xl lg:max-w-5xl mx-auto">
       <div class="text-center">
-        <h1
-          class="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white"
+        <h2
+          class="mb-4 font-semibold text-gray-800 text-4xl lg:text-5xl dark:text-white"
         >
           Kontakta oss
-        </h1>
+        </h2>
         <p class="mt-1 text-gray-600 dark:text-neutral-400">
           Vi ser fram emot att höra från dig.
         </p>
@@ -31,14 +31,14 @@
                   <input
                     type="text"
                     placeholder="Förnamn"
-                    class="py-2.5 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-green-500 focus:ring-green-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"
+                    class="py-2.5 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-green-600 focus:ring-green-600 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"
                   />
                 </div>
                 <div>
                   <input
                     type="text"
                     placeholder="Efternamn"
-                    class="py-2.5 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-green-500 focus:ring-green-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"
+                    class="py-2.5 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-green-600 focus:ring-green-600 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"
                   />
                 </div>
               </div>
@@ -47,7 +47,7 @@
                 <input
                   type="email"
                   placeholder="E-post"
-                  class="py-2.5 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-green-500 focus:ring-green-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"
+                  class="py-2.5 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-green-600 focus:ring-green-600 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"
                 />
               </div>
 
@@ -55,7 +55,7 @@
                 <input
                   type="text"
                   placeholder="Telefon"
-                  class="py-2.5 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-green-500 focus:ring-green-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"
+                  class="py-2.5 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-green-600 focus:ring-green-600 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"
                 />
               </div>
 
@@ -63,7 +63,7 @@
                 <textarea
                   rows="4"
                   placeholder="Meddelande"
-                  class="py-2.5 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-green-500 focus:ring-green-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"
+                  class="py-2.5 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-green-600 focus:ring-green-600 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"
                 ></textarea>
               </div>
             </div>

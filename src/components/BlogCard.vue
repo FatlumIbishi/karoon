@@ -1,6 +1,9 @@
 <!-- components/BlogCard.vue -->
 <template>
-  <a class="group flex flex-col focus:outline-hidden" :href="article.link">
+  <router-link
+    class="group flex flex-col focus:outline-hidden"
+    :to="article.link"
+  >
     <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
       <img
         class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
@@ -8,15 +11,18 @@
         :alt="article.title"
       />
     </div>
+
     <div class="mt-7">
       <h3
         class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white"
       >
         {{ article.title }}
       </h3>
+
       <p class="mt-3 text-gray-800 dark:text-neutral-200">
         {{ article.description }}
       </p>
+
       <p
         class="mt-5 inline-flex items-center gap-x-1 text-sm text-green-700 decoration-2 group-hover:underline font-medium dark:text-green-400"
       >
@@ -37,7 +43,7 @@
         </svg>
       </p>
     </div>
-  </a>
+  </router-link>
 </template>
 
 <script setup>
