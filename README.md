@@ -1,37 +1,43 @@
-## Technologies
+# Vue.js starter template
 
-This project uses:
+Features:
 
-[VueJS](https://vuejs.org/) For Views, with the [UIKit](https://getuikit.com/)
+- 🛠 [Vue 3](https://v3.vuejs.org/guide/introduction.html)
+- ⚡️ [Vite](https://vitejs.dev/guide/)
+- 🗂 [PNPM](https://pnpm.io)
+- 🛣 [Vue Router](https://github.com/vuejs/vue-router-next)
+- 🔄 [Auto import](https://github.com/unplugin/unplugin-auto-import)
+- 🎨 [Tailwind CSS](https://tailwindcss.com/docs/)
+- 🌗 [Light and dark mode composable](https://github.com/lecoueyl/vue3-template/blob/main/src/composables/theme.js)
+- 🔡 [Inter var font](https://rsms.me/inter/)
+- 📄 [Github pages action](https://pages.github.com)
 
-[Node](https://nodejs.org/en/) For a JavaScript runtime
+[Open in Visual Studio Code](https://open.vscode.dev/lecoueyl/vue3-template)
 
-## Installation
+## Getting Started
 
-To install this project simply clone or download the repo:
+Scaffold this repository
 
-`git clone https://github.com/FatlumIbishi/karoon`
+```sh
+pnpx degit lecoueyl/vue3-template my-project
+cd my-project
+```
 
-`cd karoon`
+Install and start dev server
 
-`npm install`
+```sh
+pnpm install
+pnpm run dev
+```
 
-### Setup/Development
+## Deployment
 
-To develop using this project you can run
+### Github pages
 
-`npm run dev` to run Hot Reload
+The default github action will build to `gh-page` when pushing on `main` branch.
 
-`npm run build` to build it static
+For a project page, the base path of the repository must be specified. Add the following secret in the Github repository `Settings` > `Secrets` > `Actions`
 
-### Requirements
-
-This project will require:
-
-- Node >=12
-
-##
-
-The Client can be accessed by hitting the document root:
-
-`localhost:8080` Will send you to the application.
+| Name                        | Value                    |
+| --------------------------- | ------------------------ |
+| VITE_BASE_PUBLIC_PATH       | `/repository-name/`      |
